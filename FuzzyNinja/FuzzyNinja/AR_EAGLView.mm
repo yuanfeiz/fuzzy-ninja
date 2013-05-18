@@ -15,8 +15,8 @@
 // *** Note, OpenGL ES 1.x is supported only in the ImageTargets sample ***
 #import "ShaderUtils.h"
 #define MAKESTRING(x) #x
-#import "Shaders/Shader.fsh"
-#import "Shaders/Shader.vsh"
+#import "Shader.fsh"
+#import "Shader.vsh"
 #endif
 
 
@@ -120,11 +120,6 @@
     if ([EAGLContext currentContext] == context) {
         [EAGLContext setCurrentContext:nil];
     }
-    
-    [context release];
-    [objects3D release];
-    [textureList release];
-    [super dealloc];
 }
 
 - (void)finishOpenGLESCommands
@@ -339,7 +334,6 @@
         obj3D.texture = [textures objectAtIndex:i];
 
         [objects3D addObject:obj3D];
-        [obj3D release];
     }
 }
 

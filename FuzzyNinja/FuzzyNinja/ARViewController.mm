@@ -30,13 +30,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [self unloadViewData];
-    [super dealloc];
-}
-
-
 - (void) unloadViewData
 {
     // undo everything created in loadView and viewDidLoad
@@ -45,7 +38,6 @@
     // Release the textures array
     if (textures != nil)
     {
-        [textures release];
         textures = nil;
     }
     
@@ -53,13 +45,11 @@
     
     if (arView != nil)
     {
-        [arView release];
         arView = nil;
     }
     
     if (parentView != nil)
     {
-        [parentView release];
         parentView = nil;
     }
 }

@@ -14,7 +14,7 @@
 #define _QCAR_RENDERER_H_
 
 // Include files
-#include <QCAR/Matrices.h>
+#include <QCAR/Matrices.hpp>
 #include <QCAR/Vectors.h>
 #include <QCAR/State.h>
 #include <QCAR/NonCopyable.h>

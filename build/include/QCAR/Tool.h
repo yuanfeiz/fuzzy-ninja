@@ -15,7 +15,7 @@
 
 // Include files
 #include <QCAR/System.h>
-#include <QCAR/Matrices.h>
+#include <QCAR/Matrices.hpp>
 #include <QCAR/Vectors.h>
 
 namespace QCAR

@@ -23,8 +23,6 @@
     
     unsigned int numIndices;
     const unsigned short *indices;
-    
-    Texture *texture;
 }
 
 @property (nonatomic) unsigned int numVertices;

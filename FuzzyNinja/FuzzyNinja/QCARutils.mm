@@ -49,13 +49,6 @@ QCARutils *qUtils = nil; // singleton class
     return self;    
 }
 
-- (void)dealloc
-{
-    [name release];
-    [path release];
-    [super dealloc];
-}
-
 @end
 
 #pragma mark --- Class implementation ---
@@ -125,7 +118,6 @@ QCARutils *qUtils = nil; // singleton class
 // discard resources
 - (void)dealloc {
     targetsList = nil;
-    [super dealloc];
 }
 
 
@@ -134,7 +126,6 @@ QCARutils *qUtils = nil; // singleton class
     DataSetItem *dataSet = [[DataSetItem alloc] initWithName:theName andPath:thePath];
     if (dataSet != nil)
         [targetsList addObject:dataSet];
-    [dataSet release];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex

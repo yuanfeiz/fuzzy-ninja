@@ -163,7 +163,7 @@ namespace ShaderUtils
             else
             {   
                 const char* finalShader[2] = {pszDefs,pszSource};
-                GLint finalShaderSizes[2] = {strlen(pszDefs), strlen(pszSource)};
+                GLint finalShaderSizes[2] = {static_cast<GLint>(strlen(pszDefs)), static_cast<GLint>(strlen(pszSource))};
                 glShaderSource(shader, 2, finalShader, finalShaderSizes);
             }
             

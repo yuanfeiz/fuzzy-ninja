@@ -106,7 +106,6 @@ enum _errorCode {
 }
 
 @property (nonatomic) CGSize viewSize;
-@property (nonatomic, assign) id delegate; 
 
 @property (nonatomic) CGFloat contentScalingFactor;
 @property (nonatomic, retain) NSMutableArray *targetsList;

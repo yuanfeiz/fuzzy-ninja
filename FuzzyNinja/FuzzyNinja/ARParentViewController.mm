@@ -23,19 +23,9 @@
         arViewRect.size = [[UIScreen mainScreen] bounds].size;
         arViewRect.origin.x = arViewRect.origin.y = 0;
         appWindow = window;
-        [appWindow retain];
     }
     
     return self;
-}
-
-- (void)dealloc
-{
-    [arViewController release];
-    [overlayViewController release];
-    [parentView release];
-    [appWindow release];
-    [super dealloc];
 }
 
 - (void)loadView
@@ -293,7 +283,6 @@
         // On iPhone and iPod, remove the splash view from the window
         // (splashView will be nil on iPad)
         [splashView removeFromSuperview];
-        [splashView release];
         splashView = nil;
         
         // Stop the repeating timer

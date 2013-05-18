@@ -15,7 +15,7 @@
 
 // Include files
 #include <QCAR/NonCopyable.h>
-#include <QCAR/Matrices.h>
+#include <QCAR/Matrices.hpp>
 #include <QCAR/System.h>
 
 namespace QCAR

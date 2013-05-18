@@ -109,12 +109,4 @@ static BOOL firstTime = YES;
     // Handle any foreground procedures not related to animation here.
 }
 
-- (void)dealloc
-{
-    [arParentViewController release];
-    [window release];
-    
-    [super dealloc];
-}
-
 @end

@@ -27,7 +27,6 @@
 
 @synthesize mediaInfo;
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];

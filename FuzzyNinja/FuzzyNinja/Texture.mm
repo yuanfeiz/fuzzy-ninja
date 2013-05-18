@@ -9,7 +9,9 @@
 
 // Private method declarations
 @interface Texture (PrivateMethods)
-- (BOOL)copyImageDataForOpenGL:(CFDataRef)imageData;
+
+
+- (BOOL)loadImage:(NSString*)filename;
 @end
 
 @implementation Texture
@@ -65,8 +67,6 @@
     if (pngData) {
         delete[] pngData;
     }
-    
-    [super dealloc];
 }
 
 @end

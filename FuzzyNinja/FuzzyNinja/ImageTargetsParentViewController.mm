@@ -67,7 +67,7 @@
     if ([QCARutils getInstance].videoStreamStarted == YES)
     {
         // Create and show the about view
-        AboutViewController *aboutViewController = [[[AboutViewController alloc] init] autorelease];
+        AboutViewController *aboutViewController = [[AboutViewController alloc] init];
         aboutViewController.modalPresentationStyle = UIModalPresentationFormSheet;
         
         // Animate the modal only if it's an iPad

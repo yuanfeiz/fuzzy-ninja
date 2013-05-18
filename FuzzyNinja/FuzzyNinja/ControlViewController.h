@@ -19,6 +19,7 @@
 
 @property (strong, nonatomic) NSDictionary *mediaInfo;
 @property (weak, nonatomic) IBOutlet UISlider *mySlider;
+
 - (IBAction)doFullSize:(id)sender;
 - (IBAction)toggleMute:(id)sender;
 
