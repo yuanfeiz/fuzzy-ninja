@@ -18,7 +18,7 @@
 
 @interface ConnectViewController ()<ZXCaptureDelegate, SRWebSocketDelegate>
 
-@property (nonatomic, retain) ZXCapture* capture;
+@property (nonatomic, strong) ZXCapture* capture;
 
 @end
 
@@ -50,18 +50,22 @@
     [button addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
     [button setFrame:CGRectMake(10, 0, 32, 32)];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
-    
-    
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
     self.capture = [[ZXCapture alloc] init];
     self.capture.delegate = self;
     self.capture.rotation = -90.0f;
     self.capture.camera = self.capture.back;
-    
     self.capture.layer.frame = self.view.bounds;
     [self.view.layer addSublayer:self.capture.layer];
     
-    NSLog(@"1");
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.capture.layer removeFromSuperlayer];
+    [self.capture stop];
 }
 
 
@@ -148,10 +152,7 @@
 
 - (void)captureResult:(ZXCapture *)theCapture result:(ZXResult *)result {
     if (result) {
-        // We got a result. Display information about the result onscreen.
-//        [self.decodedLabel performSelectorOnMainThread:@selector(setText:) withObject:[self displayForResult:result] waitUntilDone:YES];
         NSString *code = [self displayForResult:result];
-//        NSString *code = @"88888";
         NSLog(@"%@", [self displayForResult:result]);
         // Vibrate
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
@@ -165,26 +166,6 @@
         
         appDelegate.ws.delegate = self;
         [appDelegate.ws send:[params JSONString]];
-        
-        
-//        NSString *path = [NSString stringWithFormat:@"/players/%@/connect", code];
-//        
-//        UIView *hud = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
-//        [hud setBackgroundColor:[UIColor grayColor]];
-//        [self.view addSubview:hud];
-//        
-//        [[MyClient sharedClient] postPath:path parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//            NSLog(@"%@", responseObject);
-//            if ([[responseObject valueForKeyPath:@"status"] isEqual:@"ok"]) {
-//                [hud removeFromSuperview];
-//                ControlViewController *controlViewController = [[ControlViewController alloc] initWithNibName:@"ControlViewController" bundle:nil];
-//                controlViewController.mediaInfo = responseObject;
-//                NSLog(@"%@\n", [responseObject valueForKeyPath:@"name"]);
-//                [self.navigationController pushViewController:controlViewController animated:YES];
-//            }
-//        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//            NSLog(@"%@", error);
-//        }];
         
         
     }
@@ -204,6 +185,7 @@
     NSDictionary *o = [message objectFromJSONString];
     [[NSUserDefaults standardUserDefaults] setValuesForKeysWithDictionary:o];
     NSLog(@"%@", o);
+    
     [self.navigationController pushViewController:controlViewController animated:YES];
 }
 
