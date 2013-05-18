@@ -16,7 +16,7 @@
     static MyClient *_sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedClient = [[MyClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://169.254.208.16:3001/"]];
+        _sharedClient = [[MyClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://169.254.178.15:3001/"]];
     });
     
     return _sharedClient;
