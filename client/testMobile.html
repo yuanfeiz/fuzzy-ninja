@@ -11,7 +11,7 @@
 	{
 		  Socket = window.MozWebSocket || window.WebSocket,
 		  protos = ['foo', 'bar', 'xmpp'],
-		  socket = new Socket('ws://localhost:8000/', protos),
+		  socket = new Socket('ws://localhost:7000/', protos),
 		  index  = 0;
 	
 		  var log = function(text) {
@@ -20,7 +20,7 @@
 	
 		  socket.addEventListener('open', function() {
 			log('OPEN: ' + socket.protocol);
-			var obj = { cmdType: 'matching', sourceType: 'mobile', mobileID: '777777', codeID: '88888', cmd: '100000'};
+			var obj = { cmdType: 'matching', sourceType: 'mobile', mobileID: '777777', codeID: '88888', cmd: 'volume'};
 			
 			socket.send(JSON.stringify(obj));
 		  });
