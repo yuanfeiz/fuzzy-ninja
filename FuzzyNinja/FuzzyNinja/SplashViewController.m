@@ -13,7 +13,9 @@
 #import <AFNetworking.h>
 #import "MyClient.h"
 
-@interface SplashViewController ()
+#import <SocketRocket/SRWebSocket.h>
+
+@interface SplashViewController ()<SRWebSocketDelegate>
 - (void)doSignin;
 @end
 
@@ -48,9 +50,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"noise"]]];
-    
     [self doSignin];
+    
 }
+
+- (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message {
+    NSLog(@"%@", message);
+}
+
+- (void)webSocketDidOpen:(SRWebSocket *)webSocket {
+    NSLog(@"ws did open");
+}
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.navigationController setNavigationBarHidden:YES animated:animated];

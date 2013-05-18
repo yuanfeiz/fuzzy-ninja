@@ -17,16 +17,16 @@
          landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "FuzzyNinja/ConnectViewController.m"
-         timestampString = "390580955.865229"
+         filePath = "FuzzyNinja/SplashViewController.m"
+         timestampString = "390591266.00952"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "171"
-         endingLineNumber = "171"
-         landmarkName = "-captureResult:result:"
+         startingLineNumber = "58"
+         endingLineNumber = "58"
+         landmarkName = "-webSocket:didReceiveMessage:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

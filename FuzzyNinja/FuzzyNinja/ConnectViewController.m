@@ -9,10 +9,13 @@
 #import "ConnectViewController.h"
 #import "ControlViewController.h"
 #import <ZXingObjC.h>
+#import <SRWebSocket.h>
 
 #import "MyClient.h"
 
-@interface ConnectViewController ()<ZXCaptureDelegate>
+#import "AppDelegate.h"
+
+@interface ConnectViewController ()<ZXCaptureDelegate, SRWebSocketDelegate>
 
 @property (nonatomic, retain) ZXCapture* capture;
 
@@ -152,31 +155,45 @@
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
         [theCapture stop];
         
-        NSString *path = [NSString stringWithFormat:@"/players/%@/connect", code];
+        AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+        NSString *data = [NSString stringWithFormat:@"{player_id: \"%@\", controller_id: \"%@\"}", code, @"2222"];
         
-        UIView *hud = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
-        [hud setBackgroundColor:[UIColor grayColor]];
-        [self.view addSubview:hud];
         
-        [[MyClient sharedClient] postPath:path parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            NSLog(@"%@", responseObject);
-            if ([[responseObject valueForKeyPath:@"status"] isEqual:@"ok"]) {
-                [hud removeFromSuperview];
-                ControlViewController *controlViewController = [[ControlViewController alloc] initWithNibName:@"ControlViewController" bundle:nil];
-                controlViewController.mediaInfo = responseObject;
-                NSLog(@"%@\n", [responseObject valueForKeyPath:@"name"]);
-                [self.navigationController pushViewController:controlViewController animated:YES];
-            }
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            NSLog(@"%@", error);
-        }];
+        appDelegate.ws.delegate = self;
+        [appDelegate.ws send:data];
+        
+        
+//        NSString *path = [NSString stringWithFormat:@"/players/%@/connect", code];
+//        
+//        UIView *hud = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
+//        [hud setBackgroundColor:[UIColor grayColor]];
+//        [self.view addSubview:hud];
+//        
+//        [[MyClient sharedClient] postPath:path parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//            NSLog(@"%@", responseObject);
+//            if ([[responseObject valueForKeyPath:@"status"] isEqual:@"ok"]) {
+//                [hud removeFromSuperview];
+//                ControlViewController *controlViewController = [[ControlViewController alloc] initWithNibName:@"ControlViewController" bundle:nil];
+//                controlViewController.mediaInfo = responseObject;
+//                NSLog(@"%@\n", [responseObject valueForKeyPath:@"name"]);
+//                [self.navigationController pushViewController:controlViewController animated:YES];
+//            }
+//        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//            NSLog(@"%@", error);
+//        }];
         
         
     }
 }
 
+
+
 - (void)captureSize:(ZXCapture *)capture width:(NSNumber *)width height:(NSNumber *)height {
     
+}
+
+- (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message {
+    NSLog(@"%@", message);
 }
 
 @end
