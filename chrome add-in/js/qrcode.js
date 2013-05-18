@@ -6,7 +6,7 @@
 		localStorage['rand'] = localStorage['rand'] || rand;
 		
 		var code = localStorage['rand'];
-		
+		code = 88888;
 		jQuery(
 		function(){
 			jQuery('#output').qrcode({width: 128,height: 128,text: code});

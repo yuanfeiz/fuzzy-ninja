@@ -19,7 +19,7 @@ function conn( code, id )
 			  		
 			  socket.addEventListener('open', function() {
 				log('OPEN: ' + socket.protocol);
-				var obj = { cmdType: 'login', sourceType: 'client',  codeID: code+id.toString()};
+				var obj = { cmdType: 'login', sourceType: 'client',  codeID: code};
 				socket.send(JSON.stringify(obj));
 			  });
 		
@@ -29,6 +29,7 @@ function conn( code, id )
 		
 			  socket.onmessage = function(event) {
 				log('MESSAGE: ' + event.data);
+				var obj = { cmdType: 'matching', sourceType: 'mobile', mobileID: '777777', codeID: '88888', cmd: '100000'};
 			  };
 		
 			  socket.onclose = function(event) {
