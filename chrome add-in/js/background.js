@@ -1,0 +1,1 @@
+var rand = Math.random().toString();
