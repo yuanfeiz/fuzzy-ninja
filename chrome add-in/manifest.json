@@ -2,19 +2,19 @@
    "name": "Yahoo! Video Remote", 
    "version": "0.0.1", 
    "manifest_version": 2,
-  "update_url": "",
-  "homepage_url": "",
-   "icons":  
-   {  "128": "icon.jpeg",
-        "48": "icon.jpeg",
-        "16": "icon.jpeg"},
+//  "update_url": "",
+//  "homepage_url": "",
+ //  "icons":  
+ //  {  "128": "icon.jpeg",
+ //       "48": "icon.jpeg",
+ //       "16": "icon.jpeg"},
    "description": "Video Remote support",
    "permissions": ["tabs", "服务器地址","notifications"],
-   "background": {
-   "scripts": ["jquery.js","app.js","background.js"]
- 	},
+ //  "background": {
+ //  "scripts": ["jquery.js","app.js","background.js"]
+ //	},
    "browser_action": { 
-      "default_popup": "qrcode.html",
-      "default_icon":"icon.jpeg"
+      "default_popup": "qrcode.html"
+   //   "default_icon":"icon.jpeg"
    }
 }
