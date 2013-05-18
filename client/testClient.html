@@ -20,7 +20,7 @@
 	
 		  socket.addEventListener('open', function() {
 			log('OPEN: ' + socket.protocol);
-			var obj = { cmdType: 'login', sourceType: 'client',  codeID: '88888'};
+			// var obj = { cmdType: 'login', sourceType: 'client',  codeID: '88888'};
 			socket.send(JSON.stringify(obj));
 		  });
 	
