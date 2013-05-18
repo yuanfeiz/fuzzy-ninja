@@ -12,7 +12,4 @@
 
 @interface ControlViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIButton *playButton;
-- (IBAction)startReadQRCode:(id)sender;
-
 @end

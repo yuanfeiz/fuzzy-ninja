@@ -36,6 +36,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    if ([self.navigationController.navigationBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)] ) {
+        UIImage *image = [UIImage imageNamed:@"naviTab"];
+        [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+    }
+    
+    UIImage *backButtonImage = [UIImage imageNamed:@"arrow"];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:backButtonImage style:UIBarButtonItemStyleBordered target:self.navigationController action:@selector(popViewControllerAnimated:)];
+    self.navigationItem.leftBarButtonItem = backButton;
+    
     self.navigationController.title = @"扫一扫";
     
     self.capture = [[ZXCapture alloc] init];
@@ -141,14 +150,19 @@
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
         [theCapture stop];
         
+        NSString *path = [NSString stringWithFormat:@"/players/%@/connect", code];
+        
         [[MyClient sharedClient] postPath:@"/players/2222/connect" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            NSLog(@"1");
+            NSLog(@"%@", responseObject);
+            if ([[responseObject valueForKeyPath:@"status"] isEqual:@"ok"]) {
+                ControlViewController *controlViewController = [[ControlViewController alloc] initWithNibName:@"ControlViewController" bundle:nil];
+                [self.navigationController pushViewController:controlViewController animated:YES];
+            }
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"2");
         }];
         
-//        ControlViewController *controlViewController = [[ControlViewController alloc] initWithNibName:@"ControlViewController" bundle:nil];
-//        [self.navigationController pushViewController:controlViewController animated:YES];
+        
     }
 }
 
