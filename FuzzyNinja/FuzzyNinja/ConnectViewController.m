@@ -41,11 +41,13 @@
         [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
     }
     
-    UIImage *backButtonImage = [UIImage imageNamed:@"arrow"];
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:backButtonImage style:UIBarButtonItemStyleBordered target:self.navigationController action:@selector(popViewControllerAnimated:)];
-    self.navigationItem.leftBarButtonItem = backButton;
+    UIButton *button =  [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:[UIImage imageNamed:@"arrow"] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
+    [button setFrame:CGRectMake(10, 0, 32, 32)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     
-    self.navigationController.title = @"扫一扫";
+    
     
     self.capture = [[ZXCapture alloc] init];
     self.capture.delegate = self;
@@ -152,10 +154,16 @@
         
         NSString *path = [NSString stringWithFormat:@"/players/%@/connect", code];
         
+        UIView *hud = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
+        [hud setBackgroundColor:[UIColor grayColor]];
+        [self.view addSubview:hud];
+        
         [[MyClient sharedClient] postPath:@"/players/2222/connect" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
             NSLog(@"%@", responseObject);
             if ([[responseObject valueForKeyPath:@"status"] isEqual:@"ok"]) {
+                [hud removeFromSuperview];
                 ControlViewController *controlViewController = [[ControlViewController alloc] initWithNibName:@"ControlViewController" bundle:nil];
+                controlViewController.MediaLabel.text = [responseObject valueForKey:@"name"];
                 [self.navigationController pushViewController:controlViewController animated:YES];
             }
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

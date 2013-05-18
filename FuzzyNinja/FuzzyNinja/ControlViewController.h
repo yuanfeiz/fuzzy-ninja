@@ -11,5 +11,10 @@
 
 
 @interface ControlViewController : UIViewController
+- (IBAction)doNext:(id)sender;
+- (IBAction)doPrevious:(id)sender;
+- (IBAction)togglePlayPause:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *slideTrigger;
+@property (weak, nonatomic) IBOutlet UILabel *MediaLabel;
 
 @end
