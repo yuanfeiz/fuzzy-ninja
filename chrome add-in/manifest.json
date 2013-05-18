@@ -9,15 +9,6 @@
  //       "48": "icon.jpeg",
  //       "16": "icon.jpeg"},
    "description": "Video Remote support",
-<<<<<<< HEAD
- //  "background": {
- //  "scripts": ["jquery.js","app.js","background.js"]
- //	},
-=======
-   "background": {
-   "scripts": ["js/jquery-1.9.1.min.js", "js/background.js"]
- 	},
->>>>>>> origin/nodejs
    "browser_action": { 
       "default_popup": "qrcode.html"
    //   "default_icon":"icon.jpeg"

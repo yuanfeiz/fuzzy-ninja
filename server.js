@@ -6,7 +6,7 @@ var mapClientID2Socket = [];
 var mapMobileID2Socket = [];
 var mapClient2Mobile = [];
 
-var port = 8000;
+var port = 7000;
 
 var server = http.createServer();
 
