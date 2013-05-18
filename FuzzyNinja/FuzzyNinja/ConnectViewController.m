@@ -19,6 +19,7 @@
 @interface ConnectViewController ()<ZXCaptureDelegate, SRWebSocketDelegate>
 
 @property (nonatomic, strong) ZXCapture* capture;
+@property (nonatomic, strong) NSDictionary *m;
 
 @end
 
@@ -179,14 +180,32 @@
 
 - (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message {
     NSLog(@"%@", message);
+    self.m = [message objectFromJSONString];
+    [[NSUserDefaults standardUserDefaults] setValuesForKeysWithDictionary:self.m];
+    
+    [self.capture stop];
+    
+    UIButton *zenButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    zenButton.frame = CGRectMake(100, 300, 100, 50);
+    [zenButton setTitle:@"ZenMode" forState:UIControlStateNormal];
+    [self.view addSubview:zenButton];
+    [zenButton addTarget:self action:@selector(enterZenMode:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *ninjaButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    ninjaButton.frame = CGRectMake(100, 400, 100, 50);
+    [ninjaButton setTitle:@"NinjaMode" forState:UIControlStateNormal];
+    [self.view addSubview:ninjaButton];
+    [ninjaButton addTarget:self action:@selector(enterNinjaMode::) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (IBAction)enterZenMode:(id)sender {
     ControlViewController *controlViewController = [[ControlViewController alloc] initWithNibName:@"ControlViewController" bundle:nil];
-    
-    controlViewController.mediaInfo = [message objectFromJSONString];
-    NSDictionary *o = [message objectFromJSONString];
-    [[NSUserDefaults standardUserDefaults] setValuesForKeysWithDictionary:o];
-    NSLog(@"%@", o);
-    
+    controlViewController.mediaInfo = self.m;
     [self.navigationController pushViewController:controlViewController animated:YES];
+}
+
+- (IBAction)enterNinjaMode:(id)sender {
+    
 }
 
 @end
