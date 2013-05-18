@@ -1,3 +1,6 @@
+
 chrome.extension.onRequest.addListener(function(request, sender, sendResponse){
-        sendResponse({flag: "ok"});
+	
+		alert(request.data);
+        sendResponse("666666666");
 });

@@ -2,7 +2,7 @@
  $(document).ready(
  	function()
  	{
- 		console.log(0);
+ 		/*console.log(0);
         chrome.tabs.getSelected(null, 
         	function(tab) {
             	chrome.tabs.sendRequest(tab.id,function(response){
@@ -11,8 +11,17 @@
 							Query('#output').qrcode({width: 128,height: 128,text: "Size doesn't matter"});
 						});
                 	});
-                //$('#output').html("");
-                //$('#output').html(response.flag);
-            });
+					
+            });*/
+			
+			chrome.tabs.getSelected(null, function(tab) 
+			{
+				alert(tab.id);
+            	chrome.tabs.sendRequest(tab.id, {data: 3333}, 
+				function(response){
+                	console.log(response);
+					    });
+			
+			});
     });
 
