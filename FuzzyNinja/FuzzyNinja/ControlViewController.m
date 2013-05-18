@@ -89,4 +89,17 @@
     NSLog(@"%@", message);
     NSLog(@"%@", [message objectFromJSONString]);
 }
+- (IBAction)doFullSize:(id)sender {
+    NSUserDefaults *db = [NSUserDefaults standardUserDefaults];
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:@"matching", @"cmdType", @"mobile", @"sourceType", [db valueForKey:@"controller_id"], @"mobileID", [db valueForKey:@"player_id"], @"codeID", @"fullsize", @"cmd", nil];
+    [self.ws send:[params JSONString]];
+}
+
+- (IBAction)toggleMute:(id)sender {
+    NSUserDefaults *db = [NSUserDefaults standardUserDefaults];
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:@"matching", @"cmdType", @"mobile", @"sourceType", [db valueForKey:@"controller_id"], @"mobileID", [db valueForKey:@"player_id"], @"codeID", @"silent", @"cmd", nil];
+    [self.ws send:[params JSONString]];
+}
 @end
