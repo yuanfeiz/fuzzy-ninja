@@ -1,6 +1,7 @@
 Backend::Application.routes.draw do
   resources :players do
     post "connect"
+    post "control"
   end
 
 

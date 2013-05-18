@@ -84,7 +84,8 @@ class PlayersController < ApplicationController
   def connect
     # 这里在表里边建立链接
 
-    render json: {status: "ok", name: "Now Playing - Can't take my eye off you"}
+    # render json: {status: "ok", name: "Now Playing - Can't take my eye off you"}
+    render json: {status: "ok", name: "Now Playing - Moon River"}
   end
 
   def control

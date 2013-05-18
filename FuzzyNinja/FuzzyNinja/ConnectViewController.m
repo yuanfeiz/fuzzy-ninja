@@ -139,7 +139,7 @@
             break;
     }
     
-    return [NSString stringWithFormat:@"Scanned!\n\nFormat: %@\n\nContents:\n%@", formatString, result.text];
+    return result.text;
 }
 
 - (void)captureResult:(ZXCapture *)theCapture result:(ZXResult *)result {
@@ -168,7 +168,7 @@
                 [self.navigationController pushViewController:controlViewController animated:YES];
             }
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            NSLog(@"2");
+            NSLog(@"%@", error);
         }];
         
         

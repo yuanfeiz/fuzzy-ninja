@@ -35,6 +35,10 @@
     
     NSLog(@"%@", mediaInfo);
     
+    [self.MediaLabel setText:[mediaInfo valueForKey:@"name"]];
+    
+    
+    
     NSLog(@"OK");
 }
 
@@ -48,9 +52,9 @@
     
     NSString *server = @"2222";
     
-    NSDictionary *params = [NSDictionary dictionaryWithObject:@"next" forKey:@"action"];
+    NSDictionary *params = [NSDictionary dictionaryWithObject:@"next" forKey:@"control"];
     
-    NSString *path = [NSString stringWithFormat:@"/players/%@/connect", server];
+    NSString *path = [NSString stringWithFormat:@"/players/%@/control", server];
     [[MyClient sharedClient] postPath:path parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"%@", responseObject);
     } failure:nil];
@@ -60,9 +64,9 @@
     
     NSString *server = @"2222";
     
-    NSDictionary *params = [NSDictionary dictionaryWithObject:@"previous" forKey:@"action"];
+    NSDictionary *params = [NSDictionary dictionaryWithObject:@"previous" forKey:@"control"];
     
-    NSString *path = [NSString stringWithFormat:@"/players/%@/connect", server];
+    NSString *path = [NSString stringWithFormat:@"/players/%@/control", server];
     [[MyClient sharedClient] postPath:path parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"%@", responseObject);
     } failure:nil];
@@ -71,9 +75,9 @@
 - (IBAction)togglePlayPause:(id)sender {
     NSString *server = @"2222";
     
-    NSDictionary *params = [NSDictionary dictionaryWithObject:@"play" forKey:@"action"];
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:@"toggle", @"control", nil];
     
-    NSString *path = [NSString stringWithFormat:@"/players/%@/connect", server];
+    NSString *path = [NSString stringWithFormat:@"/players/%@/control", server];
     [[MyClient sharedClient] postPath:path parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"%@", responseObject);
         if ([[responseObject valueForKey:@"play_status"] isEqual:@"1"]) {
