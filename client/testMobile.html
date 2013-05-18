@@ -20,7 +20,7 @@
 	
 		  socket.addEventListener('open', function() {
 			log('OPEN: ' + socket.protocol);
-			var obj = { cmdType: 'matching', sourceType: 'mobile', mobileID: '777777', codeID: '88888', cmd: 'volume'};
+			var obj = { cmdType: 'matching', sourceType: 'mobile', mobileID: '777777', codeID: '88888', cmd: 'play'};
 			
 			socket.send(JSON.stringify(obj));
 		  });

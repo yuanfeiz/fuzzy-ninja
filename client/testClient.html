@@ -5,7 +5,8 @@
 <title>Client PC</title>
 
 <script type="text/javascript" src="faye-browser-min.js"></script>
-
+<script type="text/javascript" src="../chrome add-in/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://webplayer.yahooapis.com/player.js"></script> 
 <script type="text/javascript">
 	try
 	{
@@ -30,6 +31,7 @@
 	
 		  socket.onmessage = function(event) {
 			log('MESSAGE: ' + event.data);
+			$(".ywp-play-pause").click();
 		  };
 	
 		  socket.onclose = function(event) {
@@ -44,5 +46,7 @@
 </head>
 
 <body>
+
+<a href="http://mediaplayer.yahoo.com/example3.mp3"  >Yodel (mp3 link)</a>
 </body>
 </html>
