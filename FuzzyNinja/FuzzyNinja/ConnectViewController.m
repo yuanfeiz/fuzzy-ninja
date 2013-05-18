@@ -9,10 +9,14 @@
 #import "ConnectViewController.h"
 #import "ControlViewController.h"
 #import <ZXingObjC.h>
-
+#import <SRWebSocket.h>
+#import <JSONKit.h>
+#import <JSONKit/JSONKit.h>
 #import "MyClient.h"
 
-@interface ConnectViewController ()<ZXCaptureDelegate>
+#import "AppDelegate.h"
+
+@interface ConnectViewController ()<ZXCaptureDelegate, SRWebSocketDelegate>
 
 @property (nonatomic, retain) ZXCapture* capture;
 
@@ -36,7 +40,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.navigationController.title = @"扫一扫";
+    if ([self.navigationController.navigationBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)] ) {
+        UIImage *image = [UIImage imageNamed:@"naviTab"];
+        [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+    }
+    
+    UIButton *button =  [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:[UIImage imageNamed:@"arrow"] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
+    [button setFrame:CGRectMake(10, 0, 32, 32)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    
+    
     
     self.capture = [[ZXCapture alloc] init];
     self.capture.delegate = self;
@@ -128,7 +143,7 @@
             break;
     }
     
-    return [NSString stringWithFormat:@"Scanned!\n\nFormat: %@\n\nContents:\n%@", formatString, result.text];
+    return result.text;
 }
 
 - (void)captureResult:(ZXCapture *)theCapture result:(ZXResult *)result {
@@ -141,19 +156,50 @@
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
         [theCapture stop];
         
-        [[MyClient sharedClient] postPath:@"/players/2222/connect" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            NSLog(@"1");
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            NSLog(@"2");
-        }];
+        AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+        NSString *data = [NSString stringWithFormat:@"{\"player_id\": \"%@\", \"controller_id\": \"%@\"}", code, @"2222"];
         
-//        ControlViewController *controlViewController = [[ControlViewController alloc] initWithNibName:@"ControlViewController" bundle:nil];
-//        [self.navigationController pushViewController:controlViewController animated:YES];
+        
+        appDelegate.ws.delegate = self;
+        [appDelegate.ws send:data];
+        
+        
+//        NSString *path = [NSString stringWithFormat:@"/players/%@/connect", code];
+//        
+//        UIView *hud = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
+//        [hud setBackgroundColor:[UIColor grayColor]];
+//        [self.view addSubview:hud];
+//        
+//        [[MyClient sharedClient] postPath:path parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//            NSLog(@"%@", responseObject);
+//            if ([[responseObject valueForKeyPath:@"status"] isEqual:@"ok"]) {
+//                [hud removeFromSuperview];
+//                ControlViewController *controlViewController = [[ControlViewController alloc] initWithNibName:@"ControlViewController" bundle:nil];
+//                controlViewController.mediaInfo = responseObject;
+//                NSLog(@"%@\n", [responseObject valueForKeyPath:@"name"]);
+//                [self.navigationController pushViewController:controlViewController animated:YES];
+//            }
+//        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//            NSLog(@"%@", error);
+//        }];
+        
+        
     }
 }
 
+
+
 - (void)captureSize:(ZXCapture *)capture width:(NSNumber *)width height:(NSNumber *)height {
     
+}
+
+- (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message {
+    NSLog(@"%@", message);
+    ControlViewController *controlViewController = [[ControlViewController alloc] initWithNibName:@"ControlViewController" bundle:nil];
+    
+    controlViewController.mediaInfo = [message objectFromJSONString];
+    NSLog(@"%@", [message objectFromJSONString]);
+    [self.navigationController pushViewController:controlViewController animated:YES];
 }
 
 @end
