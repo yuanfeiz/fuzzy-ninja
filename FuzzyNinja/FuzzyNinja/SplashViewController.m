@@ -10,9 +10,12 @@
 #import "ConnectViewController.h"
 #import "ControlViewController.h"
 
+#import "AppDelegate.h"
+
 #import <AFNetworking.h>
 #import "MyClient.h"
 
+#import <JSONKit/JSONKit.h>
 #import <SocketRocket/SRWebSocket.h>
 
 @interface SplashViewController ()<SRWebSocketDelegate>
@@ -51,16 +54,24 @@
     // Do any additional setup after loading the view from its nib.
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"noise"]]];
     [self doSignin];
-    
+//    
+//    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+//    appDelegate.ws.delegate = self;
 }
 
-- (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message {
-    NSLog(@"%@", message);
-}
-
-- (void)webSocketDidOpen:(SRWebSocket *)webSocket {
-    NSLog(@"ws did open");
-}
+//- (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message {
+//    NSLog(@"%@", message);
+//    NSLog(@"%@", [message objectFromJSONString]);
+//    
+//}
+//
+//- (void)webSocketDidOpen:(SRWebSocket *)webSocket {
+//    NSString *data = [NSString stringWithFormat:@"{\"player_id\": \"%@\", \"controller_id\": \"%@\"}", @"asdkfjasdf", @"2222"];
+//    NSLog(@"%@", [data objectFromJSONString]);
+//
+//    [webSocket send:data];
+//    NSLog(@"ws did open");
+//}
 
 
 - (void)viewWillAppear:(BOOL)animated {

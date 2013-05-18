@@ -10,6 +10,8 @@
 #import "ControlViewController.h"
 #import <ZXingObjC.h>
 #import <SRWebSocket.h>
+#import <JSONKit.h>
+#import <JSONKit/JSONKit.h>
 #import "MyClient.h"
 
 #import "AppDelegate.h"
@@ -155,7 +157,7 @@
         [theCapture stop];
         
         AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-        NSString *data = [NSString stringWithFormat:@"{player_id: \"%@\", controller_id: \"%@\"}", code, @"2222"];
+        NSString *data = [NSString stringWithFormat:@"{\"player_id\": \"%@\", \"controller_id\": \"%@\"}", code, @"2222"];
         
         
         appDelegate.ws.delegate = self;
@@ -194,8 +196,9 @@
 - (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message {
     NSLog(@"%@", message);
     ControlViewController *controlViewController = [[ControlViewController alloc] initWithNibName:@"ControlViewController" bundle:nil];
-    controlViewController.mediaInfo = [NSJSONSerialization JSONObjectWithData:message options:0 error:0];
-    NSLog(@"%@", controlViewController.mediaInfo);
+    
+    controlViewController.mediaInfo = [message objectFromJSONString];
+    NSLog(@"%@", [message objectFromJSONString]);
     [self.navigationController pushViewController:controlViewController animated:YES];
 }
 
