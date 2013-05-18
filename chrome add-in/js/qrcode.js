@@ -1,3 +1,3 @@
 jQuery(function(){
-	jQuery('#output').qrcode({width: 64,height: 64,text: "Size doesn't matter"});
+	jQuery('#output').qrcode({width: 128,height: 128,text: "Size doesn't matter"});
 })
