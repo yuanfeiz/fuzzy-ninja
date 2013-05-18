@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#include <ZBarSDK.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<ZBarReaderViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
+- (IBAction)startReadQRCode:(id)sender;
 
 @end
