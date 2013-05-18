@@ -16,8 +16,8 @@
 		6F21599217475C94004663A6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F21599117475C94004663A6 /* Default.png */; };
 		6F21599417475C94004663A6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F21599317475C94004663A6 /* Default@2x.png */; };
 		6F21599617475C94004663A6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F21599517475C94004663A6 /* Default-568h@2x.png */; };
-		6F21599917475C94004663A6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F21599817475C94004663A6 /* ViewController.m */; };
-		6F21599C17475C94004663A6 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F21599A17475C94004663A6 /* ViewController.xib */; };
+		6F21599917475C94004663A6 /* ControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F21599817475C94004663A6 /* ControlViewController.m */; };
+		6F21599C17475C94004663A6 /* ControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F21599A17475C94004663A6 /* ControlViewController.xib */; };
 		EDDC2210DAE844919A61670C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DE2E4CF6B7498FB306C8E1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -35,9 +35,9 @@
 		6F21599117475C94004663A6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		6F21599317475C94004663A6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		6F21599517475C94004663A6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		6F21599717475C94004663A6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6F21599817475C94004663A6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		6F21599B17475C94004663A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		6F21599717475C94004663A6 /* ControlViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControlViewController.h; sourceTree = "<group>"; };
+		6F21599817475C94004663A6 /* ControlViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ControlViewController.m; sourceTree = "<group>"; };
+		6F21599B17475C94004663A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ControlViewController.xib; sourceTree = "<group>"; };
 		AD5E07C52AEF468CBFD87258 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		C1DE2E4CF6B7498FB306C8E1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -91,9 +91,9 @@
 			children = (
 				6F21598E17475C94004663A6 /* AppDelegate.h */,
 				6F21598F17475C94004663A6 /* AppDelegate.m */,
-				6F21599717475C94004663A6 /* ViewController.h */,
-				6F21599817475C94004663A6 /* ViewController.m */,
-				6F21599A17475C94004663A6 /* ViewController.xib */,
+				6F21599717475C94004663A6 /* ControlViewController.h */,
+				6F21599817475C94004663A6 /* ControlViewController.m */,
+				6F21599A17475C94004663A6 /* ControlViewController.xib */,
 				6F21598617475C94004663A6 /* Supporting Files */,
 			);
 			path = FuzzyNinja;
@@ -170,7 +170,7 @@
 				6F21599217475C94004663A6 /* Default.png in Resources */,
 				6F21599417475C94004663A6 /* Default@2x.png in Resources */,
 				6F21599617475C94004663A6 /* Default-568h@2x.png in Resources */,
-				6F21599C17475C94004663A6 /* ViewController.xib in Resources */,
+				6F21599C17475C94004663A6 /* ControlViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +214,7 @@
 			files = (
 				6F21598C17475C94004663A6 /* main.m in Sources */,
 				6F21599017475C94004663A6 /* AppDelegate.m in Sources */,
-				6F21599917475C94004663A6 /* ViewController.m in Sources */,
+				6F21599917475C94004663A6 /* ControlViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,12 +229,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		6F21599A17475C94004663A6 /* ViewController.xib */ = {
+		6F21599A17475C94004663A6 /* ControlViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6F21599B17475C94004663A6 /* en */,
 			);
-			name = ViewController.xib;
+			name = ControlViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
