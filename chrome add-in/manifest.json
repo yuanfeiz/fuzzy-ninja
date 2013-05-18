@@ -9,12 +9,23 @@
  //       "48": "icon.jpeg",
  //       "16": "icon.jpeg"},
    "description": "Video Remote support",
-   "permissions": ["tabs", "服务器地址","notifications"],
  //  "background": {
  //  "scripts": ["jquery.js","app.js","background.js"]
  //	},
    "browser_action": { 
       "default_popup": "qrcode.html"
    //   "default_icon":"icon.jpeg"
-   }
+   },
+  "permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+    "content_scripts": [{
+        "js": [
+               "./js/jquery-1.9.1.min.js",
+               "./js/myjs.js"
+              ],
+        "matches": [ "http://*/*", "https://*/*" ],
+        "run_at": "document_end"
+    }]
 }
