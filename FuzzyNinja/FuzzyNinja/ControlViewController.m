@@ -92,7 +92,7 @@
 - (IBAction)doFullSize:(id)sender {
     NSUserDefaults *db = [NSUserDefaults standardUserDefaults];
     
-    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:@"matching", @"cmdType", @"mobile", @"sourceType", [db valueForKey:@"controller_id"], @"mobileID", [db valueForKey:@"player_id"], @"codeID", @"fullsize", @"cmd", nil];
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:@"matching", @"cmdType", @"mobile", @"sourceType", [db valueForKey:@"controller_id"], @"mobileID", [db valueForKey:@"player_id"], @"codeID", @"fullScreen", @"cmd", nil];
     [self.ws send:[params JSONString]];
 }
 
