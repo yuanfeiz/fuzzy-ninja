@@ -1,6 +1,6 @@
 var Stream      = require('stream').Stream,
     util        = require('util'),
-    driver      = require('websocket-driver'),
+    driver      = require('./driver'),
     API         = require('./websocket/api'),
     EventTarget = require('./websocket/api/event_target'),
     Event       = require('./websocket/api/event');

@@ -8,17 +8,39 @@
 
 <script type="text/javascript">
 
-    var client = new Faye.Client('http://localhost:8000/faye');
-	
-	var publication = client.publish('/foo', {text: 'Hi there'});
+try
+{
+	  Socket = window.MozWebSocket || window.WebSocket,
+	  protos = ['foo', 'bar', 'xmpp'],
+	  socket = new Socket('ws://localhost:8000/', protos),
+	  index  = 0;
 
-publication.callback(function() {
-  alert('Message received by server!');
-});
+      var log = function(text) {
+		  console.log(text);
+      };
 
-publication.errback(function(error) {
-  alert('There was a problem: ' + error.message);
-});
+      socket.addEventListener('open', function() {
+        log('OPEN: ' + socket.protocol);
+        socket.send('Hello, world');
+      });
+
+      socket.onerror = function(event) {
+        log('ERROR: ' + event.message);
+      };
+
+      socket.onmessage = function(event) {
+        log('MESSAGE: ' + event.data);
+        setTimeout(function() { socket.send(++index + ' ' + event.data) }, 2000);
+      };
+
+      socket.onclose = function(event) {
+        log('CLOSE: ' + event.code + ', ' + event.reason);
+      };
+}
+catch( e )
+{
+	alert(e);
+}
 
 </script>
 </head>

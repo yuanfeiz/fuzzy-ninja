@@ -5,7 +5,7 @@
 // * http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#interface-event
 
 var util   = require('util'),
-    driver = require('websocket-driver'),
+    driver = require('./driver'),
     API    = require('./websocket/api');
 
 var WebSocket = function(request, socket, body, protocols, options) {

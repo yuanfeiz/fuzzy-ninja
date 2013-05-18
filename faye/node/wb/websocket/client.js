@@ -1,7 +1,7 @@
 var util   = require('util'),
     net    = require('net'),
     tls    = require('tls'),
-    driver = require('websocket-driver'),
+    driver = require('../driver'),
     API    = require('./api');
 
 var Client = function(url, protocols, options) {
