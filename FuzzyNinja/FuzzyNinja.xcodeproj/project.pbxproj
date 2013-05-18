@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F06797917482CBC0005AFC2 /* libQCAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F06796D17482CBC0005AFC2 /* libQCAR.a */; };
 		6F06797A17482CBD0005AFC2 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F06796E17482CBC0005AFC2 /* CoreMotion.framework */; };
 		6F06797B17482CBD0005AFC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F06796F17482CBC0005AFC2 /* UIKit.framework */; };
 		6F06797C17482CBD0005AFC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F06797017482CBC0005AFC2 /* Foundation.framework */; };
@@ -19,32 +18,6 @@
 		6F06798217482CBD0005AFC2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F06797617482CBC0005AFC2 /* AVFoundation.framework */; };
 		6F06798317482CBD0005AFC2 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F06797717482CBC0005AFC2 /* CoreVideo.framework */; };
 		6F06798417482CBD0005AFC2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F06797817482CBC0005AFC2 /* Security.framework */; };
-		6F0679A317482D1C0005AFC2 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 6F06799B17482D1C0005AFC2 /* about.html */; };
-		6F0679A417482D1C0005AFC2 /* StonesAndChips.dat in Resources */ = {isa = PBXBuildFile; fileRef = 6F06799C17482D1C0005AFC2 /* StonesAndChips.dat */; };
-		6F0679A517482D1C0005AFC2 /* StonesAndChips.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6F06799D17482D1C0005AFC2 /* StonesAndChips.xml */; };
-		6F0679A617482D1C0005AFC2 /* Tarmac.dat in Resources */ = {isa = PBXBuildFile; fileRef = 6F06799E17482D1C0005AFC2 /* Tarmac.dat */; };
-		6F0679A717482D1C0005AFC2 /* Tarmac.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6F06799F17482D1C0005AFC2 /* Tarmac.xml */; };
-		6F0679A817482D1C0005AFC2 /* TextureTeapotBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F0679A017482D1C0005AFC2 /* TextureTeapotBlue.png */; };
-		6F0679A917482D1C0005AFC2 /* TextureTeapotBrass.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F0679A117482D1C0005AFC2 /* TextureTeapotBrass.png */; };
-		6F0679AA17482D1C0005AFC2 /* TextureTeapotRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F0679A217482D1C0005AFC2 /* TextureTeapotRed.png */; };
-		6F0679C31748304C0005AFC2 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6F0679B21748304C0005AFC2 /* License.txt */; };
-		6F0679C41748304C0005AFC2 /* AR_EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F0679B41748304C0005AFC2 /* AR_EAGLView.mm */; };
-		6F0679C51748304C0005AFC2 /* ARParentViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F0679B61748304C0005AFC2 /* ARParentViewController.mm */; };
-		6F0679C61748304C0005AFC2 /* ARViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F0679B81748304C0005AFC2 /* ARViewController.mm */; };
-		6F0679C71748304C0005AFC2 /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0679BA1748304C0005AFC2 /* OverlayView.m */; };
-		6F0679C81748304C0005AFC2 /* OverlayViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F0679BC1748304C0005AFC2 /* OverlayViewController.mm */; };
-		6F0679C91748304C0005AFC2 /* QCARutils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F0679BE1748304C0005AFC2 /* QCARutils.mm */; };
-		6F0679CA1748304C0005AFC2 /* ShaderUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6F0679BF1748304C0005AFC2 /* ShaderUtils.cpp */; };
-		6F0679CB1748304C0005AFC2 /* Texture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F0679C21748304C0005AFC2 /* Texture.mm */; };
-		6F0679CF174830640005AFC2 /* Shader.fsh in Sources */ = {isa = PBXBuildFile; fileRef = 6F0679CD174830640005AFC2 /* Shader.fsh */; };
-		6F0679D0174830640005AFC2 /* Shader.vsh in Sources */ = {isa = PBXBuildFile; fileRef = 6F0679CE174830640005AFC2 /* Shader.vsh */; };
-		6F0679DC1748307E0005AFC2 /* ImageTargetsOverlayViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F0679D31748307D0005AFC2 /* ImageTargetsOverlayViewController.mm */; };
-		6F0679DD1748307E0005AFC2 /* ImageTargetsParentViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F0679D51748307D0005AFC2 /* ImageTargetsParentViewController.mm */; };
-		6F0679DE1748307E0005AFC2 /* ImageTargetsQCARutils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F0679D71748307D0005AFC2 /* ImageTargetsQCARutils.mm */; };
-		6F0679DF1748307E0005AFC2 /* EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F0679D91748307D0005AFC2 /* EAGLView.mm */; };
-		6F0679E01748307E0005AFC2 /* ImageTargetsAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F0679DB1748307E0005AFC2 /* ImageTargetsAppDelegate.mm */; };
-		6F0679E5174830910005AFC2 /* AboutViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F0679E3174830910005AFC2 /* AboutViewController.mm */; };
-		6F0679E6174830910005AFC2 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F0679E4174830910005AFC2 /* AboutViewController.xib */; };
 		6F21598017475C94004663A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F21597F17475C94004663A6 /* UIKit.framework */; };
 		6F21598217475C94004663A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F21598117475C94004663A6 /* Foundation.framework */; };
 		6F21598417475C94004663A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F21598317475C94004663A6 /* CoreGraphics.framework */; };
@@ -90,7 +63,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6F06796D17482CBC0005AFC2 /* libQCAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libQCAR.a; sourceTree = "<group>"; };
 		6F06796E17482CBC0005AFC2 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreMotion.framework; sourceTree = "<group>"; };
 		6F06796F17482CBC0005AFC2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UIKit.framework; sourceTree = "<group>"; };
 		6F06797017482CBC0005AFC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Foundation.framework; sourceTree = "<group>"; };
@@ -102,46 +74,6 @@
 		6F06797617482CBC0005AFC2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVFoundation.framework; sourceTree = "<group>"; };
 		6F06797717482CBC0005AFC2 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreVideo.framework; sourceTree = "<group>"; };
 		6F06797817482CBC0005AFC2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Security.framework; sourceTree = "<group>"; };
-		6F06799B17482D1C0005AFC2 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
-		6F06799C17482D1C0005AFC2 /* StonesAndChips.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = StonesAndChips.dat; sourceTree = "<group>"; };
-		6F06799D17482D1C0005AFC2 /* StonesAndChips.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = StonesAndChips.xml; sourceTree = "<group>"; };
-		6F06799E17482D1C0005AFC2 /* Tarmac.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tarmac.dat; sourceTree = "<group>"; };
-		6F06799F17482D1C0005AFC2 /* Tarmac.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tarmac.xml; sourceTree = "<group>"; };
-		6F0679A017482D1C0005AFC2 /* TextureTeapotBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextureTeapotBlue.png; sourceTree = "<group>"; };
-		6F0679A117482D1C0005AFC2 /* TextureTeapotBrass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextureTeapotBrass.png; sourceTree = "<group>"; };
-		6F0679A217482D1C0005AFC2 /* TextureTeapotRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextureTeapotRed.png; sourceTree = "<group>"; };
-		6F0679B21748304C0005AFC2 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
-		6F0679B31748304C0005AFC2 /* AR_EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AR_EAGLView.h; sourceTree = "<group>"; };
-		6F0679B41748304C0005AFC2 /* AR_EAGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AR_EAGLView.mm; sourceTree = "<group>"; };
-		6F0679B51748304C0005AFC2 /* ARParentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARParentViewController.h; sourceTree = "<group>"; };
-		6F0679B61748304C0005AFC2 /* ARParentViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ARParentViewController.mm; sourceTree = "<group>"; };
-		6F0679B71748304C0005AFC2 /* ARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARViewController.h; sourceTree = "<group>"; };
-		6F0679B81748304C0005AFC2 /* ARViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ARViewController.mm; sourceTree = "<group>"; };
-		6F0679B91748304C0005AFC2 /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
-		6F0679BA1748304C0005AFC2 /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
-		6F0679BB1748304C0005AFC2 /* OverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayViewController.h; sourceTree = "<group>"; };
-		6F0679BC1748304C0005AFC2 /* OverlayViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OverlayViewController.mm; sourceTree = "<group>"; };
-		6F0679BD1748304C0005AFC2 /* QCARutils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = QCARutils.h; sourceTree = "<group>"; };
-		6F0679BE1748304C0005AFC2 /* QCARutils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = QCARutils.mm; sourceTree = "<group>"; };
-		6F0679BF1748304C0005AFC2 /* ShaderUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderUtils.cpp; sourceTree = "<group>"; };
-		6F0679C01748304C0005AFC2 /* ShaderUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderUtils.h; sourceTree = "<group>"; };
-		6F0679C11748304C0005AFC2 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
-		6F0679C21748304C0005AFC2 /* Texture.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Texture.mm; sourceTree = "<group>"; };
-		6F0679CD174830640005AFC2 /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.fsh; sourceTree = "<group>"; };
-		6F0679CE174830640005AFC2 /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.vsh; sourceTree = "<group>"; };
-		6F0679D21748307D0005AFC2 /* ImageTargetsOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTargetsOverlayViewController.h; sourceTree = "<group>"; };
-		6F0679D31748307D0005AFC2 /* ImageTargetsOverlayViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageTargetsOverlayViewController.mm; sourceTree = "<group>"; };
-		6F0679D41748307D0005AFC2 /* ImageTargetsParentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTargetsParentViewController.h; sourceTree = "<group>"; };
-		6F0679D51748307D0005AFC2 /* ImageTargetsParentViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageTargetsParentViewController.mm; sourceTree = "<group>"; };
-		6F0679D61748307D0005AFC2 /* ImageTargetsQCARutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTargetsQCARutils.h; sourceTree = "<group>"; };
-		6F0679D71748307D0005AFC2 /* ImageTargetsQCARutils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageTargetsQCARutils.mm; sourceTree = "<group>"; };
-		6F0679D81748307D0005AFC2 /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
-		6F0679D91748307D0005AFC2 /* EAGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EAGLView.mm; sourceTree = "<group>"; };
-		6F0679DA1748307D0005AFC2 /* ImageTargetsAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTargetsAppDelegate.h; sourceTree = "<group>"; };
-		6F0679DB1748307E0005AFC2 /* ImageTargetsAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageTargetsAppDelegate.mm; sourceTree = "<group>"; };
-		6F0679E2174830910005AFC2 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
-		6F0679E3174830910005AFC2 /* AboutViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AboutViewController.mm; sourceTree = "<group>"; };
-		6F0679E4174830910005AFC2 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		6F21597C17475C94004663A6 /* FuzzyNinja.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuzzyNinja.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F21597F17475C94004663A6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6F21598117475C94004663A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -205,7 +137,6 @@
 				6F21598217475C94004663A6 /* Foundation.framework in Frameworks */,
 				6F21598417475C94004663A6 /* CoreGraphics.framework in Frameworks */,
 				EDDC2210DAE844919A61670C /* libPods.a in Frameworks */,
-				6F06797917482CBC0005AFC2 /* libQCAR.a in Frameworks */,
 				6F06797A17482CBD0005AFC2 /* CoreMotion.framework in Frameworks */,
 				6F06797B17482CBD0005AFC2 /* UIKit.framework in Frameworks */,
 				6F06797C17482CBD0005AFC2 /* Foundation.framework in Frameworks */,
@@ -226,88 +157,8 @@
 		6F06798517482CDC0005AFC2 /* NinjaMode */ = {
 			isa = PBXGroup;
 			children = (
-				6F0679E7174830970005AFC2 /* ViewControllers */,
-				6F0679E1174830830005AFC2 /* ImageTargets */,
-				6F0679CC174830510005AFC2 /* ARCommon */,
-				6F0679AB17482D210005AFC2 /* Assets */,
 			);
 			name = NinjaMode;
-			sourceTree = "<group>";
-		};
-		6F0679AB17482D210005AFC2 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				6F06799B17482D1C0005AFC2 /* about.html */,
-				6F06799C17482D1C0005AFC2 /* StonesAndChips.dat */,
-				6F06799D17482D1C0005AFC2 /* StonesAndChips.xml */,
-				6F06799E17482D1C0005AFC2 /* Tarmac.dat */,
-				6F06799F17482D1C0005AFC2 /* Tarmac.xml */,
-				6F0679A017482D1C0005AFC2 /* TextureTeapotBlue.png */,
-				6F0679A117482D1C0005AFC2 /* TextureTeapotBrass.png */,
-				6F0679A217482D1C0005AFC2 /* TextureTeapotRed.png */,
-			);
-			name = Assets;
-			sourceTree = "<group>";
-		};
-		6F0679CC174830510005AFC2 /* ARCommon */ = {
-			isa = PBXGroup;
-			children = (
-				6F0679D1174830680005AFC2 /* Shaders */,
-				6F0679B21748304C0005AFC2 /* License.txt */,
-				6F0679B31748304C0005AFC2 /* AR_EAGLView.h */,
-				6F0679B41748304C0005AFC2 /* AR_EAGLView.mm */,
-				6F0679B51748304C0005AFC2 /* ARParentViewController.h */,
-				6F0679B61748304C0005AFC2 /* ARParentViewController.mm */,
-				6F0679B71748304C0005AFC2 /* ARViewController.h */,
-				6F0679B81748304C0005AFC2 /* ARViewController.mm */,
-				6F0679B91748304C0005AFC2 /* OverlayView.h */,
-				6F0679BA1748304C0005AFC2 /* OverlayView.m */,
-				6F0679BB1748304C0005AFC2 /* OverlayViewController.h */,
-				6F0679BC1748304C0005AFC2 /* OverlayViewController.mm */,
-				6F0679BD1748304C0005AFC2 /* QCARutils.h */,
-				6F0679BE1748304C0005AFC2 /* QCARutils.mm */,
-				6F0679BF1748304C0005AFC2 /* ShaderUtils.cpp */,
-				6F0679C01748304C0005AFC2 /* ShaderUtils.h */,
-				6F0679C11748304C0005AFC2 /* Texture.h */,
-				6F0679C21748304C0005AFC2 /* Texture.mm */,
-			);
-			name = ARCommon;
-			sourceTree = "<group>";
-		};
-		6F0679D1174830680005AFC2 /* Shaders */ = {
-			isa = PBXGroup;
-			children = (
-				6F0679CD174830640005AFC2 /* Shader.fsh */,
-				6F0679CE174830640005AFC2 /* Shader.vsh */,
-			);
-			name = Shaders;
-			sourceTree = "<group>";
-		};
-		6F0679E1174830830005AFC2 /* ImageTargets */ = {
-			isa = PBXGroup;
-			children = (
-				6F0679D21748307D0005AFC2 /* ImageTargetsOverlayViewController.h */,
-				6F0679D31748307D0005AFC2 /* ImageTargetsOverlayViewController.mm */,
-				6F0679D41748307D0005AFC2 /* ImageTargetsParentViewController.h */,
-				6F0679D51748307D0005AFC2 /* ImageTargetsParentViewController.mm */,
-				6F0679D61748307D0005AFC2 /* ImageTargetsQCARutils.h */,
-				6F0679D71748307D0005AFC2 /* ImageTargetsQCARutils.mm */,
-				6F0679D81748307D0005AFC2 /* EAGLView.h */,
-				6F0679D91748307D0005AFC2 /* EAGLView.mm */,
-				6F0679DA1748307D0005AFC2 /* ImageTargetsAppDelegate.h */,
-				6F0679DB1748307E0005AFC2 /* ImageTargetsAppDelegate.mm */,
-			);
-			name = ImageTargets;
-			sourceTree = "<group>";
-		};
-		6F0679E7174830970005AFC2 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				6F0679E2174830910005AFC2 /* AboutViewController.h */,
-				6F0679E3174830910005AFC2 /* AboutViewController.mm */,
-				6F0679E4174830910005AFC2 /* AboutViewController.xib */,
-			);
-			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		6F21597317475C94004663A6 = {
@@ -331,7 +182,6 @@
 		6F21597E17475C94004663A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6F06796D17482CBC0005AFC2 /* libQCAR.a */,
 				6F06796E17482CBC0005AFC2 /* CoreMotion.framework */,
 				6F06796F17482CBC0005AFC2 /* UIKit.framework */,
 				6F06797017482CBC0005AFC2 /* Foundation.framework */,
@@ -505,16 +355,6 @@
 				6F231C291747B5790088B3C0 /* slidebar@2x.png in Resources */,
 				6F231C2A1747B5790088B3C0 /* slideblock.png in Resources */,
 				6F231C2B1747B5790088B3C0 /* slideblock@2x.png in Resources */,
-				6F0679A317482D1C0005AFC2 /* about.html in Resources */,
-				6F0679A417482D1C0005AFC2 /* StonesAndChips.dat in Resources */,
-				6F0679A517482D1C0005AFC2 /* StonesAndChips.xml in Resources */,
-				6F0679A617482D1C0005AFC2 /* Tarmac.dat in Resources */,
-				6F0679A717482D1C0005AFC2 /* Tarmac.xml in Resources */,
-				6F0679A817482D1C0005AFC2 /* TextureTeapotBlue.png in Resources */,
-				6F0679A917482D1C0005AFC2 /* TextureTeapotBrass.png in Resources */,
-				6F0679AA17482D1C0005AFC2 /* TextureTeapotRed.png in Resources */,
-				6F0679C31748304C0005AFC2 /* License.txt in Resources */,
-				6F0679E6174830910005AFC2 /* AboutViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,22 +403,6 @@
 				6FE881A21747846700C09552 /* ConnectViewController.m in Sources */,
 				6FE881A61747A2C400C09552 /* MyClient.m in Sources */,
 				6F231C2E1748292A0088B3C0 /* NinjaModeViewController.m in Sources */,
-				6F0679C41748304C0005AFC2 /* AR_EAGLView.mm in Sources */,
-				6F0679C51748304C0005AFC2 /* ARParentViewController.mm in Sources */,
-				6F0679C61748304C0005AFC2 /* ARViewController.mm in Sources */,
-				6F0679C71748304C0005AFC2 /* OverlayView.m in Sources */,
-				6F0679C81748304C0005AFC2 /* OverlayViewController.mm in Sources */,
-				6F0679C91748304C0005AFC2 /* QCARutils.mm in Sources */,
-				6F0679CA1748304C0005AFC2 /* ShaderUtils.cpp in Sources */,
-				6F0679CB1748304C0005AFC2 /* Texture.mm in Sources */,
-				6F0679CF174830640005AFC2 /* Shader.fsh in Sources */,
-				6F0679D0174830640005AFC2 /* Shader.vsh in Sources */,
-				6F0679DC1748307E0005AFC2 /* ImageTargetsOverlayViewController.mm in Sources */,
-				6F0679DD1748307E0005AFC2 /* ImageTargetsParentViewController.mm in Sources */,
-				6F0679DE1748307E0005AFC2 /* ImageTargetsQCARutils.mm in Sources */,
-				6F0679DF1748307E0005AFC2 /* EAGLView.mm in Sources */,
-				6F0679E01748307E0005AFC2 /* ImageTargetsAppDelegate.mm in Sources */,
-				6F0679E5174830910005AFC2 /* AboutViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

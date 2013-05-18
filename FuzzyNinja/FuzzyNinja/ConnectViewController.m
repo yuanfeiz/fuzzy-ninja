@@ -196,7 +196,7 @@
     ninjaButton.frame = CGRectMake(100, 400, 100, 50);
     [ninjaButton setTitle:@"NinjaMode" forState:UIControlStateNormal];
     [self.view addSubview:ninjaButton];
-    [ninjaButton addTarget:self action:@selector(enterNinjaMode::) forControlEvents:UIControlEventTouchUpInside];
+    [ninjaButton addTarget:self action:@selector(enterNinjaMode:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (IBAction)enterZenMode:(id)sender {
