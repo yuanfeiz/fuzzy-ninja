@@ -65,17 +65,15 @@
 
 - (IBAction)doNext:(id)sender {
     NSUserDefaults *db = [NSUserDefaults standardUserDefaults];
-    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:[db valueForKey:@"controller_id"], @"controller_id",
-                            [db valueForKey:@"player_id"], @"player_id", @"next", @"control_signal", nil];
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:@"matching", @"cmdType", @"mobile", @"sourceType", [db valueForKey:@"controller_id"], @"mobileID", [db valueForKey:@"player_id"], @"codeID", @"next", @"cmd", nil];
     [self.ws send:[params JSONString]];
 }
 
 - (IBAction)doPrevious:(id)sender {
-
     NSUserDefaults *db = [NSUserDefaults standardUserDefaults];
-
-    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:[db valueForKey:@"controller_id"], @"controller_id",
-                            [db valueForKey:@"player_id"], @"player_id", @"previous", @"control_signal", nil];
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:@"matching", @"cmdType", @"mobile", @"sourceType", [db valueForKey:@"controller_id"], @"mobileID", [db valueForKey:@"player_id"], @"codeID", @"prev", @"cmd", nil];
     [self.ws send:[params JSONString]];
 }
 
@@ -83,8 +81,7 @@
 
     NSUserDefaults *db = [NSUserDefaults standardUserDefaults];
 
-    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:[db valueForKey:@"controller_id"], @"controller_id",
-                            [db valueForKey:@"player_id"], @"player_id", @"toggleStatus", @"control_signal", nil];
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:@"matching", @"cmdType", @"mobile", @"sourceType", [db valueForKey:@"controller_id"], @"mobileID", [db valueForKey:@"player_id"], @"codeID", @"play", @"cmd", nil];
     [self.ws send:[params JSONString]];
 }
 

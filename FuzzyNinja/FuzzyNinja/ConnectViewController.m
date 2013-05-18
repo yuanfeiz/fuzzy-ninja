@@ -151,17 +151,20 @@
         // We got a result. Display information about the result onscreen.
 //        [self.decodedLabel performSelectorOnMainThread:@selector(setText:) withObject:[self displayForResult:result] waitUntilDone:YES];
         NSString *code = [self displayForResult:result];
+//        NSString *code = @"88888";
         NSLog(@"%@", [self displayForResult:result]);
         // Vibrate
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
         [theCapture stop];
         
+        [[NSUserDefaults standardUserDefaults] setValue:@"2222" forKey:@"controller_id"];
+        [[NSUserDefaults standardUserDefaults] setValue:code forKey:@"player_id"];
         AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-        NSString *data = [NSString stringWithFormat:@"{\"player_id\": \"%@\", \"controller_id\": \"%@\"}", code, @"2222"];
+        NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:@"matching", @"cmdType", @"mobile", @"sourceType", @"2222", @"mobileID", code, @"codeID", nil];
         
         
         appDelegate.ws.delegate = self;
-        [appDelegate.ws send:data];
+        [appDelegate.ws send:[params JSONString]];
         
         
 //        NSString *path = [NSString stringWithFormat:@"/players/%@/connect", code];
