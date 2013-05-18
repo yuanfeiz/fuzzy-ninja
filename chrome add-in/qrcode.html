@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>Demo popup page</title>
+</head>
+<body>
+<p>
+This page to show the qrcode. The content is "the ID to show".
+</p>
+
+<div id="output"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script type="text/javascript" src="../jquery.qrcode.min.js"></script>
+<script>
+jQuery(function(){
+	jQuery('#output').qrcode("the ID to show");
+})
+</script>
+
+</body>
+</html>
