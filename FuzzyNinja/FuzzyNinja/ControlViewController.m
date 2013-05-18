@@ -17,6 +17,8 @@
 
 @implementation ControlViewController
 
+@synthesize mediaInfo;
+
 
 - (void)viewDidLoad
 {
@@ -30,6 +32,8 @@
     [button addTarget:self.navigationController action:@selector(popViewControllerAnimated:) forControlEvents:UIControlEventTouchUpInside];
     [button setFrame:CGRectMake(10, 0, 32, 32)];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    
+    NSLog(@"%@", mediaInfo);
     
     NSLog(@"OK");
 }

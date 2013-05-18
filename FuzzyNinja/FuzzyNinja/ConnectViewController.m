@@ -158,12 +158,13 @@
         [hud setBackgroundColor:[UIColor grayColor]];
         [self.view addSubview:hud];
         
-        [[MyClient sharedClient] postPath:@"/players/2222/connect" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [[MyClient sharedClient] postPath:path parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
             NSLog(@"%@", responseObject);
             if ([[responseObject valueForKeyPath:@"status"] isEqual:@"ok"]) {
                 [hud removeFromSuperview];
                 ControlViewController *controlViewController = [[ControlViewController alloc] initWithNibName:@"ControlViewController" bundle:nil];
-                controlViewController.MediaLabel.text = [responseObject valueForKey:@"name"];
+                controlViewController.mediaInfo = responseObject;
+                NSLog(@"%@\n", [responseObject valueForKeyPath:@"name"]);
                 [self.navigationController pushViewController:controlViewController animated:YES];
             }
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

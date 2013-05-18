@@ -17,4 +17,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *slideTrigger;
 @property (weak, nonatomic) IBOutlet UILabel *MediaLabel;
 
+@property (strong, nonatomic) NSDictionary *mediaInfo;
+
 @end

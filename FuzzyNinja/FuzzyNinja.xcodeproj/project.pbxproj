@@ -162,7 +162,6 @@
 				6F21598E17475C94004663A6 /* AppDelegate.h */,
 				6F21598F17475C94004663A6 /* AppDelegate.m */,
 				6F21599717475C94004663A6 /* ControlViewController.h */,
-				6F231BFB1747B4ED0088B3C0 /* noise.png */,
 				6F21599817475C94004663A6 /* ControlViewController.m */,
 				6F231BF91747B2A50088B3C0 /* ControlViewController.xib */,
 				6F21598617475C94004663A6 /* Supporting Files */,
@@ -187,6 +186,7 @@
 		6F231BFD1747B56D0088B3C0 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				6F231BFB1747B4ED0088B3C0 /* noise.png */,
 				6F231BFE1747B5790088B3C0 /* 02_0000_Fuzzy-ninja.png */,
 				6F231BFF1747B5790088B3C0 /* arrow.png */,
 				6F231C001747B5790088B3C0 /* arrow@2x.png */,
