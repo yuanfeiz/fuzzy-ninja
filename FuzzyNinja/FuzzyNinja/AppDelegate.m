@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "ControlViewController.h"
+#import "SplashViewController.h"
 
 @implementation AppDelegate
 
@@ -16,8 +17,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[ControlViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    
+    SplashViewController *rootViewController = [[SplashViewController alloc] initWithNibName:@"SplashViewController" bundle:nil];
+    UINavigationController *navigationViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    self.window.rootViewController = navigationViewController;
     [self.window makeKeyAndVisible];
     return YES;
 }

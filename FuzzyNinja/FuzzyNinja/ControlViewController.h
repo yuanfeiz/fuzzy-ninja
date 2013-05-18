@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <ZXingObjC.h>
 
-@interface ControlViewController : UIViewController<ZXCaptureDelegate>
+
+
+@interface ControlViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
 - (IBAction)startReadQRCode:(id)sender;

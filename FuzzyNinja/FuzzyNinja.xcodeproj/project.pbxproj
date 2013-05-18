@@ -18,6 +18,11 @@
 		6F21599617475C94004663A6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F21599517475C94004663A6 /* Default-568h@2x.png */; };
 		6F21599917475C94004663A6 /* ControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F21599817475C94004663A6 /* ControlViewController.m */; };
 		6F21599C17475C94004663A6 /* ControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F21599A17475C94004663A6 /* ControlViewController.xib */; };
+		6FE8819D17477C1200C09552 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE8819B17477C1200C09552 /* SplashViewController.m */; };
+		6FE8819E17477C1200C09552 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FE8819C17477C1200C09552 /* SplashViewController.xib */; };
+		6FE881A21747846700C09552 /* ConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE881A01747846700C09552 /* ConnectViewController.m */; };
+		6FE881A31747846700C09552 /* ConnectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FE881A11747846700C09552 /* ConnectViewController.xib */; };
+		6FE881A61747A2C400C09552 /* MyClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE881A51747A2C400C09552 /* MyClient.m */; };
 		EDDC2210DAE844919A61670C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DE2E4CF6B7498FB306C8E1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +43,14 @@
 		6F21599717475C94004663A6 /* ControlViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControlViewController.h; sourceTree = "<group>"; };
 		6F21599817475C94004663A6 /* ControlViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ControlViewController.m; sourceTree = "<group>"; };
 		6F21599B17475C94004663A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ControlViewController.xib; sourceTree = "<group>"; };
+		6FE8819A17477C1200C09552 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		6FE8819B17477C1200C09552 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		6FE8819C17477C1200C09552 /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		6FE8819F1747846700C09552 /* ConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectViewController.h; sourceTree = "<group>"; };
+		6FE881A01747846700C09552 /* ConnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectViewController.m; sourceTree = "<group>"; };
+		6FE881A11747846700C09552 /* ConnectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectViewController.xib; sourceTree = "<group>"; };
+		6FE881A41747A2C400C09552 /* MyClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyClient.h; sourceTree = "<group>"; };
+		6FE881A51747A2C400C09552 /* MyClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyClient.m; sourceTree = "<group>"; };
 		AD5E07C52AEF468CBFD87258 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		C1DE2E4CF6B7498FB306C8E1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -89,6 +102,14 @@
 		6F21598517475C94004663A6 /* FuzzyNinja */ = {
 			isa = PBXGroup;
 			children = (
+				6FE8819A17477C1200C09552 /* SplashViewController.h */,
+				6FE8819B17477C1200C09552 /* SplashViewController.m */,
+				6FE881A41747A2C400C09552 /* MyClient.h */,
+				6FE881A51747A2C400C09552 /* MyClient.m */,
+				6FE8819C17477C1200C09552 /* SplashViewController.xib */,
+				6FE8819F1747846700C09552 /* ConnectViewController.h */,
+				6FE881A01747846700C09552 /* ConnectViewController.m */,
+				6FE881A11747846700C09552 /* ConnectViewController.xib */,
 				6F21598E17475C94004663A6 /* AppDelegate.h */,
 				6F21598F17475C94004663A6 /* AppDelegate.m */,
 				6F21599717475C94004663A6 /* ControlViewController.h */,
@@ -171,6 +192,8 @@
 				6F21599417475C94004663A6 /* Default@2x.png in Resources */,
 				6F21599617475C94004663A6 /* Default-568h@2x.png in Resources */,
 				6F21599C17475C94004663A6 /* ControlViewController.xib in Resources */,
+				6FE8819E17477C1200C09552 /* SplashViewController.xib in Resources */,
+				6FE881A31747846700C09552 /* ConnectViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +238,9 @@
 				6F21598C17475C94004663A6 /* main.m in Sources */,
 				6F21599017475C94004663A6 /* AppDelegate.m in Sources */,
 				6F21599917475C94004663A6 /* ControlViewController.m in Sources */,
+				6FE8819D17477C1200C09552 /* SplashViewController.m in Sources */,
+				6FE881A21747846700C09552 /* ConnectViewController.m in Sources */,
+				6FE881A61747A2C400C09552 /* MyClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

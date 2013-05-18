@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @class ControlViewController;
+@class SplashViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) ControlViewController *viewController;
 
 @end
