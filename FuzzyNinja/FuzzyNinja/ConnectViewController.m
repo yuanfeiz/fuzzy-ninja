@@ -198,7 +198,9 @@
     ControlViewController *controlViewController = [[ControlViewController alloc] initWithNibName:@"ControlViewController" bundle:nil];
     
     controlViewController.mediaInfo = [message objectFromJSONString];
-    NSLog(@"%@", [message objectFromJSONString]);
+    NSDictionary *o = [message objectFromJSONString];
+    [[NSUserDefaults standardUserDefaults] setValuesForKeysWithDictionary:o];
+    NSLog(@"%@", o);
     [self.navigationController pushViewController:controlViewController animated:YES];
 }
 

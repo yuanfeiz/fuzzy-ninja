@@ -2,7 +2,7 @@ var http = require('http'),
     faye = require('./faye/node/faye-node');
 var	WebSocket = require('./faye/node/wb/websocket');
 
-var port = 8000;
+var port = 7000;
 
 var server = http.createServer();
 
@@ -11,7 +11,8 @@ server.on('upgrade', function(request, socket, body) {
     var ws = new WebSocket(request, socket, body);
 
     ws.on('message', function(event) {
-      ws.send(event.data+"asasdasdasds");
+      ws.send(event.data);
+      console.log("incoming data: " + event.data);
     });
 
     ws.on('close', function(event) {
