@@ -11,8 +11,12 @@
 
 
 @interface ControlViewController : UIViewController
+- (IBAction)doNext:(id)sender;
+- (IBAction)doPrevious:(id)sender;
+- (IBAction)togglePlayPause:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *slideTrigger;
+@property (weak, nonatomic) IBOutlet UILabel *MediaLabel;
 
-@property (weak, nonatomic) IBOutlet UIButton *playButton;
-- (IBAction)startReadQRCode:(id)sender;
+@property (strong, nonatomic) NSDictionary *mediaInfo;
 
 @end

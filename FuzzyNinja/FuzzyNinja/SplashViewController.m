@@ -10,10 +10,15 @@
 #import "ConnectViewController.h"
 #import "ControlViewController.h"
 
+#import "AppDelegate.h"
+
 #import <AFNetworking.h>
 #import "MyClient.h"
 
-@interface SplashViewController ()
+#import <JSONKit/JSONKit.h>
+#import <SocketRocket/SRWebSocket.h>
+
+@interface SplashViewController ()<SRWebSocketDelegate>
 - (void)doSignin;
 @end
 
@@ -47,7 +52,36 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"noise"]]];
     [self doSignin];
+//    
+//    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+//    appDelegate.ws.delegate = self;
+}
+
+//- (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message {
+//    NSLog(@"%@", message);
+//    NSLog(@"%@", [message objectFromJSONString]);
+//    
+//}
+//
+//- (void)webSocketDidOpen:(SRWebSocket *)webSocket {
+//    NSString *data = [NSString stringWithFormat:@"{\"player_id\": \"%@\", \"controller_id\": \"%@\"}", @"asdkfjasdf", @"2222"];
+//    NSLog(@"%@", [data objectFromJSONString]);
+//
+//    [webSocket send:data];
+//    NSLog(@"ws did open");
+//}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [super viewWillDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning

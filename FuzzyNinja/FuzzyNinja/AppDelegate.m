@@ -10,6 +10,7 @@
 
 #import "ControlViewController.h"
 #import "SplashViewController.h"
+#import <SRWebSocket.h>
 
 @implementation AppDelegate
 
@@ -20,6 +21,11 @@
     
     SplashViewController *rootViewController = [[SplashViewController alloc] initWithNibName:@"SplashViewController" bundle:nil];
     UINavigationController *navigationViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    
+    NSURL *url = [NSURL URLWithString:@"http://169.254.178.15:7000/"];
+    self.ws = [[SRWebSocket alloc] initWithURLRequest:[NSURLRequest requestWithURL:url]];
+    [self.ws open];
+    
     self.window.rootViewController = navigationViewController;
     [self.window makeKeyAndVisible];
     return YES;
