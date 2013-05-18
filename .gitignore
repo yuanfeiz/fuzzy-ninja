@@ -2,3 +2,5 @@
 .DS_Store
 
 chrome add-in/.DS_Store
+
+*.xcuserstate
