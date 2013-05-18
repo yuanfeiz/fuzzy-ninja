@@ -10,7 +10,6 @@
 #import "ControlViewController.h"
 #import <ZXingObjC.h>
 #import <SRWebSocket.h>
-
 #import "MyClient.h"
 
 #import "AppDelegate.h"
@@ -194,6 +193,10 @@
 
 - (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message {
     NSLog(@"%@", message);
+    ControlViewController *controlViewController = [[ControlViewController alloc] initWithNibName:@"ControlViewController" bundle:nil];
+    controlViewController.mediaInfo = [NSJSONSerialization JSONObjectWithData:message options:0 error:0];
+    NSLog(@"%@", controlViewController.mediaInfo);
+    [self.navigationController pushViewController:controlViewController animated:YES];
 }
 
 @end
