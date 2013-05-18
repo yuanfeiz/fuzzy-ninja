@@ -14,6 +14,8 @@
 #import "AppDelegate.h"
 
 #import <SRWebSocket.h>
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 
 @interface ControlViewController ()<SRWebSocketDelegate>
 
@@ -48,6 +50,9 @@
     self.ws = appDelegate.ws;
     self.ws.delegate = self;
     
+    [self.mySlider setThumbImage:[UIImage imageNamed:@"slideblock"] forState:UIControlStateNormal];
+    [self.mySlider setMinimumTrackTintColor:UIColorFromRGB(0x85250D)];
+    [self.mySlider setMaximumTrackTintColor:UIColorFromRGB(0x85250D)];
     
     NSLog(@"OK");
 }

@@ -18,5 +18,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *MediaLabel;
 
 @property (strong, nonatomic) NSDictionary *mediaInfo;
+@property (weak, nonatomic) IBOutlet UISlider *mySlider;
 
 @end
