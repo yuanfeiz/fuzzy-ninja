@@ -42,6 +42,7 @@
 		6F231C291747B5790088B3C0 /* slidebar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F231C121747B5790088B3C0 /* slidebar@2x.png */; };
 		6F231C2A1747B5790088B3C0 /* slideblock.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F231C131747B5790088B3C0 /* slideblock.png */; };
 		6F231C2B1747B5790088B3C0 /* slideblock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F231C141747B5790088B3C0 /* slideblock@2x.png */; };
+		6F231C2E1748292A0088B3C0 /* NinjaModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F231C2D1748292A0088B3C0 /* NinjaModeViewController.m */; };
 		6FE8819D17477C1200C09552 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE8819B17477C1200C09552 /* SplashViewController.m */; };
 		6FE8819E17477C1200C09552 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FE8819C17477C1200C09552 /* SplashViewController.xib */; };
 		6FE881A21747846700C09552 /* ConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE881A01747846700C09552 /* ConnectViewController.m */; };
@@ -91,6 +92,8 @@
 		6F231C121747B5790088B3C0 /* slidebar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slidebar@2x.png"; sourceTree = "<group>"; };
 		6F231C131747B5790088B3C0 /* slideblock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slideblock.png; sourceTree = "<group>"; };
 		6F231C141747B5790088B3C0 /* slideblock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slideblock@2x.png"; sourceTree = "<group>"; };
+		6F231C2C1748292A0088B3C0 /* NinjaModeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NinjaModeViewController.h; sourceTree = "<group>"; };
+		6F231C2D1748292A0088B3C0 /* NinjaModeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NinjaModeViewController.m; sourceTree = "<group>"; };
 		6FE8819A17477C1200C09552 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
 		6FE8819B17477C1200C09552 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		6FE8819C17477C1200C09552 /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 				6FE8819F1747846700C09552 /* ConnectViewController.h */,
 				6FE881A01747846700C09552 /* ConnectViewController.m */,
 				6FE881A11747846700C09552 /* ConnectViewController.xib */,
+				6F231C2C1748292A0088B3C0 /* NinjaModeViewController.h */,
+				6F231C2D1748292A0088B3C0 /* NinjaModeViewController.m */,
 				6F21598E17475C94004663A6 /* AppDelegate.h */,
 				6F21598F17475C94004663A6 /* AppDelegate.m */,
 				6F21599717475C94004663A6 /* ControlViewController.h */,
@@ -345,6 +350,7 @@
 				6FE8819D17477C1200C09552 /* SplashViewController.m in Sources */,
 				6FE881A21747846700C09552 /* ConnectViewController.m in Sources */,
 				6FE881A61747A2C400C09552 /* MyClient.m in Sources */,
+				6F231C2E1748292A0088B3C0 /* NinjaModeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,7 @@
 #import <JSONKit.h>
 #import <JSONKit/JSONKit.h>
 #import "MyClient.h"
+#import "NinjaModeViewController.h"
 
 #import "AppDelegate.h"
 
@@ -205,7 +206,8 @@
 }
 
 - (IBAction)enterNinjaMode:(id)sender {
-    
+    NinjaModeViewController *ninjaVC = [[NinjaModeViewController alloc] initWithNibName:@"NinjaModeViewController" bundle:nil];
+    [self.navigationController pushViewController:ninjaVC animated:YES];
 }
 
 @end
