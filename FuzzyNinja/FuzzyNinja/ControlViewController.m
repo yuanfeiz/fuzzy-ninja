@@ -14,6 +14,8 @@
 #import "AppDelegate.h"
 
 #import <SRWebSocket.h>
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 
 @interface ControlViewController ()<SRWebSocketDelegate>
 
@@ -48,6 +50,9 @@
     self.ws = appDelegate.ws;
     self.ws.delegate = self;
     
+    [self.mySlider setThumbImage:[UIImage imageNamed:@"slideblock"] forState:UIControlStateNormal];
+    [self.mySlider setMinimumTrackTintColor:UIColorFromRGB(0x85250D)];
+    [self.mySlider setMaximumTrackTintColor:UIColorFromRGB(0x85250D)];
     
     NSLog(@"OK");
 }
@@ -60,17 +65,15 @@
 
 - (IBAction)doNext:(id)sender {
     NSUserDefaults *db = [NSUserDefaults standardUserDefaults];
-    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:[db valueForKey:@"controller_id"], @"controller_id",
-                            [db valueForKey:@"player_id"], @"player_id", @"next", @"control_signal", nil];
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:@"matching", @"cmdType", @"mobile", @"sourceType", [db valueForKey:@"controller_id"], @"mobileID", [db valueForKey:@"player_id"], @"codeID", @"next", @"cmd", nil];
     [self.ws send:[params JSONString]];
 }
 
 - (IBAction)doPrevious:(id)sender {
-
     NSUserDefaults *db = [NSUserDefaults standardUserDefaults];
-
-    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:[db valueForKey:@"controller_id"], @"controller_id",
-                            [db valueForKey:@"player_id"], @"player_id", @"previous", @"control_signal", nil];
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:@"matching", @"cmdType", @"mobile", @"sourceType", [db valueForKey:@"controller_id"], @"mobileID", [db valueForKey:@"player_id"], @"codeID", @"prev", @"cmd", nil];
     [self.ws send:[params JSONString]];
 }
 
@@ -78,13 +81,25 @@
 
     NSUserDefaults *db = [NSUserDefaults standardUserDefaults];
 
-    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:[db valueForKey:@"controller_id"], @"controller_id",
-                            [db valueForKey:@"player_id"], @"player_id", @"toggleStatus", @"control_signal", nil];
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:@"matching", @"cmdType", @"mobile", @"sourceType", [db valueForKey:@"controller_id"], @"mobileID", [db valueForKey:@"player_id"], @"codeID", @"play", @"cmd", nil];
     [self.ws send:[params JSONString]];
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message {
     NSLog(@"%@", message);
     NSLog(@"%@", [message objectFromJSONString]);
+}
+- (IBAction)doFullSize:(id)sender {
+    NSUserDefaults *db = [NSUserDefaults standardUserDefaults];
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:@"matching", @"cmdType", @"mobile", @"sourceType", [db valueForKey:@"controller_id"], @"mobileID", [db valueForKey:@"player_id"], @"codeID", @"fullScreen", @"cmd", nil];
+    [self.ws send:[params JSONString]];
+}
+
+- (IBAction)toggleMute:(id)sender {
+    NSUserDefaults *db = [NSUserDefaults standardUserDefaults];
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:@"matching", @"cmdType", @"mobile", @"sourceType", [db valueForKey:@"controller_id"], @"mobileID", [db valueForKey:@"player_id"], @"codeID", @"silent", @"cmd", nil];
+    [self.ws send:[params JSONString]];
 }
 @end

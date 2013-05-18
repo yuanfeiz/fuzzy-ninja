@@ -5,6 +5,7 @@ body{
 }
 
 #output{
+	border:5px solid white;
 	position: absolute;
 		left: 53px;
 		top: 115px;

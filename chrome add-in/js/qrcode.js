@@ -9,7 +9,7 @@
 		code = 88888;
 		jQuery(
 		function(){
-			jQuery('#output').qrcode({width: 128,height: 128,text: code});
+			jQuery('#output').qrcode({border: "5px",width: 128,height: 128,text: code.toString()});
 		}
 		);
        
