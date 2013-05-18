@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FuzzyNinja/ControlViewController.m"
-         timestampString = "390581158.008096"
+         timestampString = "390594244.663233"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "18"
-         endingLineNumber = "18"
+         startingLineNumber = "24"
+         endingLineNumber = "24"
          landmarkName = "@implementation ControlViewController"
          landmarkType = "3">
       </FileBreakpoint>
