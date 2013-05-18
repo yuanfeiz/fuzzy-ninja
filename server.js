@@ -22,7 +22,7 @@ server.on('upgrade', function(request, socket, body) {
 	  switch(data.cmdType)
 	  {
 	   case 'login':
-	   console.log('login cmdType');
+	   	  console.log('login cmdType');
 	      if( data.sourceType == "client" )
 		  {
 		  	mapClientID2Socket[data.codeID.toString()] = ws;	
@@ -43,6 +43,9 @@ server.on('upgrade', function(request, socket, body) {
 			  }
 		  }
 	   break;
+	   case 'getID':
+	   	  
+	   break;
 	   default:
 	   console.log('error cmdType');
 	   break;
@@ -55,6 +58,7 @@ server.on('upgrade', function(request, socket, body) {
     });
   }
 });
+
 
 server.listen(port);
 
