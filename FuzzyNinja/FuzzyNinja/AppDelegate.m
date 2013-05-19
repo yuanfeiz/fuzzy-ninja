@@ -24,7 +24,7 @@
 //    ControlViewController *rootViewController = [[ControlViewController alloc] initWithNibName:@"ControlViewController" bundle:nil];
     UINavigationController *navigationViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
     
-    NSURL *url = [NSURL URLWithString:@"http://169.254.178.15:7000/"];
+    NSURL *url = [NSURL URLWithString:@"http://169.254.68.244:7000/"];
     self.ws = [[SRWebSocket alloc] initWithURLRequest:[NSURLRequest requestWithURL:url]];
     [self.ws open];
     

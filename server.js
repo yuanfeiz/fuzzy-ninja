@@ -1,5 +1,10 @@
 var http = require('http'),
-faye = require('./faye/node/faye-node');
+    faye = require('./faye/node/faye-node'),
+    redis = require ('redis');
+
+var redisClient = redis.createClient();
+
+
 var	WebSocket = require('./faye/node/wb/websocket');
 
 var mapClientID2Socket = [];
@@ -36,7 +41,10 @@ server.on('upgrade', function(request, socket, body) {
        console.log("mobile");
        mapMobileID2Socket[data.mobileID.toString()] = ws;
 
-       if( mapClientID2Socket[data.codeID.toString()] )
+       redisClient.set(data.codeID.toString(), data.mobileID.toString(), redis.print);
+       redisClient.set(data.mobileID.toString(), data.codeID.toString(), redis.print);
+
+       if( mapClientID2Socket[data.codeID.toString()] && redisClient.get(data.codeID.toString()))
        {
         console.log("found");
         // mapClientID2Socket[data.codeID.toString()].send("match sucessfully");
