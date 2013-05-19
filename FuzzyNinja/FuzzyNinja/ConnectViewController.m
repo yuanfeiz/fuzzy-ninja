@@ -13,6 +13,7 @@
 #import <JSONKit.h>
 #import <JSONKit/JSONKit.h>
 #import "MyClient.h"
+#import "NinjaModeViewController.h"
 
 #import "AppDelegate.h"
 
@@ -59,7 +60,7 @@
     self.capture.rotation = -90.0f;
     self.capture.camera = self.capture.back;
     self.capture.layer.frame = self.view.bounds;
-    [self.view.layer addSublayer:self.capture.layer];
+    [self.cameraView.layer addSublayer:self.capture.layer];
     
     [super viewWillAppear:animated];
 }
@@ -185,17 +186,19 @@
     
     [self.capture stop];
     
-    UIButton *zenButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    zenButton.frame = CGRectMake(100, 300, 100, 50);
-    [zenButton setTitle:@"ZenMode" forState:UIControlStateNormal];
-    [self.view addSubview:zenButton];
-    [zenButton addTarget:self action:@selector(enterZenMode:) forControlEvents:UIControlEventTouchUpInside];
+//    UIButton *zenButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    zenButton.frame = CGRectMake(100, 300, 100, 50);
+//    [zenButton setTitle:@"ZenMode" forState:UIControlStateNormal];
+//    [self.view addSubview:zenButton];
+//    [zenButton addTarget:self action:@selector(enterZenMode:) forControlEvents:UIControlEventTouchUpInside];
+//    
+//    UIButton *ninjaButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    ninjaButton.frame = CGRectMake(100, 400, 100, 50);
+//    [ninjaButton setTitle:@"NinjaMode" forState:UIControlStateNormal];
+//    [self.view addSubview:ninjaButton];
+//    [ninjaButton addTarget:self action:@selector(enterNinjaMode:) forControlEvents:UIControlEventTouchUpInside];
     
-    UIButton *ninjaButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    ninjaButton.frame = CGRectMake(100, 400, 100, 50);
-    [ninjaButton setTitle:@"NinjaMode" forState:UIControlStateNormal];
-    [self.view addSubview:ninjaButton];
-    [ninjaButton addTarget:self action:@selector(enterNinjaMode::) forControlEvents:UIControlEventTouchUpInside];
+    [self enterZenMode:nil];
 }
 
 - (IBAction)enterZenMode:(id)sender {
@@ -205,7 +208,8 @@
 }
 
 - (IBAction)enterNinjaMode:(id)sender {
-    
+    NinjaModeViewController *ninjaVC = [[NinjaModeViewController alloc] initWithNibName:@"NinjaModeViewController" bundle:nil];
+    [self.navigationController pushViewController:ninjaVC animated:YES];
 }
 
 @end

@@ -6,9 +6,11 @@
 //  Copyright (c) 2013年 stranbird. All rights reserved.
 //
 
+#import "RootViewController.h"
 #import "ControlViewController.h"
 #import <AFNetworking.h>
 #import <JSONKit/JSONKit.h>
+#import "NinjaModeViewController.h"
 
 #import "MyClient.h"
 #import "AppDelegate.h"
@@ -27,7 +29,6 @@
 
 @synthesize mediaInfo;
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -42,6 +43,7 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     
     NSLog(@"%@", mediaInfo);
+    [mediaInfo setValue:@"Now Playing: MIKE RELM vs ZOETROPE" forKey:@"name"];
     
     [self.MediaLabel setText:[mediaInfo valueForKey:@"name"]];
     
@@ -101,5 +103,12 @@
     
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:@"matching", @"cmdType", @"mobile", @"sourceType", [db valueForKey:@"controller_id"], @"mobileID", [db valueForKey:@"player_id"], @"codeID", @"silent", @"cmd", nil];
     [self.ws send:[params JSONString]];
+}
+
+- (IBAction)switchMode:(UIButton *)sender {
+    NinjaModeViewController *vc = [[NinjaModeViewController alloc] initWithNibName:@"ControlViewController" bundle:nil];
+
+//    RootViewController *vc = [[RootViewController alloc] initWithNibName:@"PhoneContent" bundle:nil];
+    [self.navigationController presentViewController:vc animated:NO completion:nil];
 }
 @end
