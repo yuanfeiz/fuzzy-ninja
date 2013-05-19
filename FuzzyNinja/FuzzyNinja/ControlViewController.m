@@ -43,6 +43,7 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     
     NSLog(@"%@", mediaInfo);
+    [mediaInfo setValue:@"Now Playing: MIKE RELM vs ZOETROPE" forKey:@"name"];
     
     [self.MediaLabel setText:[mediaInfo valueForKey:@"name"]];
     

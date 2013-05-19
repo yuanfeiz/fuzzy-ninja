@@ -45,9 +45,12 @@
   
  */
 
+#import "AppDelegate.h"
 #import "MyViewController.h"
+#import <JSONKit/JSONKit.h>
+#import <SRWebSocket.h>
 
-@interface MyViewController ()
+@interface MyViewController ()<SRWebSocketDelegate>
 {
     int pageNumber;
 }
@@ -74,12 +77,36 @@
 - (IBAction)didClick:(id)sender {
     switch (pageNumber) {
         case 0:
-            NSLog(@"play");
+            [self control:@"play"];
             break;
-            
+        case 1:
+            [self control:@"play"];
+            break;
+        case 2:
+            [self control:@"fullScreen"];
+            break;
+        case 3:
+            [self control:@"prev"];
+            break;
+        case 4:
+            [self control:@"next"];
+            break;
         default:
             break;
     }
+}
+
+- (void)control:(NSString *)cmd {
+    NSUserDefaults *db = [NSUserDefaults standardUserDefaults];
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:@"matching", @"cmdType", @"mobile", @"sourceType", [db valueForKey:@"controller_id"], @"mobileID", [db valueForKey:@"player_id"], @"codeID", cmd, @"cmd", nil];
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    [appDelegate.ws send:[params JSONString]];
+    [appDelegate.ws setDelegate:self];
+}
+
+- (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message {
+    
 }
 
 @end

@@ -16,11 +16,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    application.applicationSupportsShakeToEdit = YES;
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-//    SplashViewController *rootViewController = [[SplashViewController alloc] initWithNibName:@"SplashViewController" bundle:nil];
-    ControlViewController *rootViewController = [[ControlViewController alloc] initWithNibName:@"ControlViewController" bundle:nil];
+    SplashViewController *rootViewController = [[SplashViewController alloc] initWithNibName:@"SplashViewController" bundle:nil];
+//    ControlViewController *rootViewController = [[ControlViewController alloc] initWithNibName:@"ControlViewController" bundle:nil];
     UINavigationController *navigationViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
     
     NSURL *url = [NSURL URLWithString:@"http://169.254.178.15:7000/"];
