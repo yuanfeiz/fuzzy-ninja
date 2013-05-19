@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ConnectViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIView *cameraView;
 
 @end

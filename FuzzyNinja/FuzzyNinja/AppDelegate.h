@@ -11,8 +11,11 @@
 @class ControlViewController;
 @class SplashViewController;
 @class SRWebSocket;
+@class ContentController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (nonatomic, strong) IBOutlet ContentController *contentController;
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, strong) SRWebSocket *ws;

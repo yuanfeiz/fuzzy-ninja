@@ -19,6 +19,13 @@
 // Please contact the author.
 // Version: 1.5pre.
 
+// OpenCV
+#define COCOAPODS_POD_AVAILABLE_OpenCV
+// This library does not follow semantic-versioning,
+// so we were not able to define version macros.
+// Please contact the author.
+// Version: 2.4.3.2.
+
 // SocketRocket
 #define COCOAPODS_POD_AVAILABLE_SocketRocket
 #define COCOAPODS_VERSION_MAJOR_SocketRocket 0
