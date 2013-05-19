@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F064B961748601B00F036BB /* PhoneContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F064B911748601B00F036BB /* PhoneContentController.m */; };
+		6F064B971748601B00F036BB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F064B931748601B00F036BB /* RootViewController.m */; };
+		6F064B981748601B00F036BB /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F064B951748601B00F036BB /* MyViewController.m */; };
+		6F064B9B1748607A00F036BB /* ContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F064B9A1748607A00F036BB /* ContentController.m */; };
+		6F064B9F174860EE00F036BB /* content_iPhone.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F064B9C174860ED00F036BB /* content_iPhone.plist */; };
+		6F064BA0174860EE00F036BB /* PhoneContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F064B9D174860ED00F036BB /* PhoneContent.xib */; };
+		6F064BA1174860EE00F036BB /* MyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F064B9E174860ED00F036BB /* MyView.xib */; };
+		6F064BA8174860F800F036BB /* small_one.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F064BA2174860F700F036BB /* small_one.png */; };
+		6F064BB51748666B00F036BB /* small_five.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F064BB01748666700F036BB /* small_five.png */; };
+		6F064BB61748666B00F036BB /* small_four.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F064BB11748666800F036BB /* small_four.png */; };
+		6F064BB71748666B00F036BB /* small_three.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F064BB21748666800F036BB /* small_three.png */; };
+		6F064BB81748666B00F036BB /* small_two.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F064BB31748666A00F036BB /* small_two.png */; };
 		6F06797A17482CBD0005AFC2 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F06796E17482CBC0005AFC2 /* CoreMotion.framework */; };
 		6F06797B17482CBD0005AFC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F06796F17482CBC0005AFC2 /* UIKit.framework */; };
 		6F06797C17482CBD0005AFC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F06797017482CBC0005AFC2 /* Foundation.framework */; };
@@ -63,6 +75,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F064B901748601B00F036BB /* PhoneContentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneContentController.h; sourceTree = "<group>"; };
+		6F064B911748601B00F036BB /* PhoneContentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneContentController.m; sourceTree = "<group>"; };
+		6F064B921748601B00F036BB /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		6F064B931748601B00F036BB /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		6F064B941748601B00F036BB /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		6F064B951748601B00F036BB /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		6F064B991748607900F036BB /* ContentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentController.h; sourceTree = "<group>"; };
+		6F064B9A1748607A00F036BB /* ContentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentController.m; sourceTree = "<group>"; };
+		6F064B9C174860ED00F036BB /* content_iPhone.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = content_iPhone.plist; sourceTree = "<group>"; };
+		6F064B9D174860ED00F036BB /* PhoneContent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhoneContent.xib; sourceTree = "<group>"; };
+		6F064B9E174860ED00F036BB /* MyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyView.xib; sourceTree = "<group>"; };
+		6F064BA2174860F700F036BB /* small_one.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = small_one.png; sourceTree = "<group>"; };
+		6F064BB01748666700F036BB /* small_five.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = small_five.png; sourceTree = "<group>"; };
+		6F064BB11748666800F036BB /* small_four.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = small_four.png; sourceTree = "<group>"; };
+		6F064BB21748666800F036BB /* small_three.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = small_three.png; sourceTree = "<group>"; };
+		6F064BB31748666A00F036BB /* small_two.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = small_two.png; sourceTree = "<group>"; };
+		6F06796D17482CBC0005AFC2 /* libQCAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libQCAR.a; sourceTree = "<group>"; };
 		6F06796E17482CBC0005AFC2 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreMotion.framework; sourceTree = "<group>"; };
 		6F06796F17482CBC0005AFC2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UIKit.framework; sourceTree = "<group>"; };
 		6F06797017482CBC0005AFC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Foundation.framework; sourceTree = "<group>"; };
@@ -157,6 +186,22 @@
 		6F06798517482CDC0005AFC2 /* NinjaMode */ = {
 			isa = PBXGroup;
 			children = (
+				6F064BA2174860F700F036BB /* small_one.png */,
+				6F064BB01748666700F036BB /* small_five.png */,
+				6F064BB11748666800F036BB /* small_four.png */,
+				6F064BB21748666800F036BB /* small_three.png */,
+				6F064BB31748666A00F036BB /* small_two.png */,
+				6F064B901748601B00F036BB /* PhoneContentController.h */,
+				6F064B911748601B00F036BB /* PhoneContentController.m */,
+				6F064B921748601B00F036BB /* RootViewController.h */,
+				6F064B931748601B00F036BB /* RootViewController.m */,
+				6F064B941748601B00F036BB /* MyViewController.h */,
+				6F064B951748601B00F036BB /* MyViewController.m */,
+				6F064B991748607900F036BB /* ContentController.h */,
+				6F064B9A1748607A00F036BB /* ContentController.m */,
+				6F064B9C174860ED00F036BB /* content_iPhone.plist */,
+				6F064B9D174860ED00F036BB /* PhoneContent.xib */,
+				6F064B9E174860ED00F036BB /* MyView.xib */,
 			);
 			name = NinjaMode;
 			sourceTree = "<group>";
@@ -182,6 +227,7 @@
 		6F21597E17475C94004663A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6F06796D17482CBC0005AFC2 /* libQCAR.a */,
 				6F06796E17482CBC0005AFC2 /* CoreMotion.framework */,
 				6F06796F17482CBC0005AFC2 /* UIKit.framework */,
 				6F06797017482CBC0005AFC2 /* Foundation.framework */,
@@ -355,6 +401,14 @@
 				6F231C291747B5790088B3C0 /* slidebar@2x.png in Resources */,
 				6F231C2A1747B5790088B3C0 /* slideblock.png in Resources */,
 				6F231C2B1747B5790088B3C0 /* slideblock@2x.png in Resources */,
+				6F064B9F174860EE00F036BB /* content_iPhone.plist in Resources */,
+				6F064BA0174860EE00F036BB /* PhoneContent.xib in Resources */,
+				6F064BA1174860EE00F036BB /* MyView.xib in Resources */,
+				6F064BA8174860F800F036BB /* small_one.png in Resources */,
+				6F064BB51748666B00F036BB /* small_five.png in Resources */,
+				6F064BB61748666B00F036BB /* small_four.png in Resources */,
+				6F064BB71748666B00F036BB /* small_three.png in Resources */,
+				6F064BB81748666B00F036BB /* small_two.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +457,10 @@
 				6FE881A21747846700C09552 /* ConnectViewController.m in Sources */,
 				6FE881A61747A2C400C09552 /* MyClient.m in Sources */,
 				6F231C2E1748292A0088B3C0 /* NinjaModeViewController.m in Sources */,
+				6F064B961748601B00F036BB /* PhoneContentController.m in Sources */,
+				6F064B971748601B00F036BB /* RootViewController.m in Sources */,
+				6F064B981748601B00F036BB /* MyViewController.m in Sources */,
+				6F064B9B1748607A00F036BB /* ContentController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FuzzyNinja/ControlViewController.m"
-         timestampString = "390597185.93262"
+         timestampString = "390619509.03109"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "26"
-         endingLineNumber = "26"
+         startingLineNumber = "28"
+         endingLineNumber = "28"
          landmarkName = "@implementation ControlViewController"
          landmarkType = "3">
       </FileBreakpoint>
@@ -53,6 +53,19 @@
          startingLineNumber = "151"
          endingLineNumber = "151"
          landmarkName = "-displayForResult:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "FuzzyNinja/ColorTrackingViewController.m"
+         timestampString = "390613260.732529"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "310"
+         endingLineNumber = "310"
+         landmarkName = "-compileShader:type:file:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

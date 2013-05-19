@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <>
+
+@class ContentController;
 
 @interface NinjaModeViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UILabel *MediaLabel;
+@property (weak, nonatomic) IBOutlet UISlider *mySlider;
+@property (weak, nonatomic) IBOutlet UIButton *switchButton;
+@property (nonatomic, strong) IBOutlet ContentController *contentController;
 @end

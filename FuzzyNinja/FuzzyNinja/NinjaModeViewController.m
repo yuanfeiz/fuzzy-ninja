@@ -27,7 +27,12 @@
 {
     [super viewDidLoad];
     
-    }
+    [[NSBundle mainBundle] loadNibNamed:@"PhoneContent" owner:self options:nil];
+    
+
+    
+//    [self.navigationController pushViewController:<#(UIViewController *)#> animated:<#(BOOL)#>]
+}
 
 - (void)didReceiveMemoryWarning
 {
