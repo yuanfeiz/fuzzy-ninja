@@ -2,6 +2,8 @@ An iOS Remote app for Yahoo! Web player.
 ===========
 by __fuzzy-ninja__
 
+这是为Yahoo!的Web player开发的手机远程控制软件，可以通过手机对网页上使用Yahoo! web player正在播放的媒体进行播放、暂停、下一首、上一首、全屏、静音等操作。
+
 #使用方式
 ###安装chrome插件:
 
