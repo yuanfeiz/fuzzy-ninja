@@ -25,7 +25,7 @@
 @implementation SplashViewController
 
 - (void)doSignin {
-    NSURL *url = [NSURL URLWithString:@"http://169.254.130.53:3001/sessions"];
+    NSURL *url = [NSURL URLWithString:@"http://169.254.146.126:3001/sessions"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request setHTTPMethod:@"POST"];
                              
