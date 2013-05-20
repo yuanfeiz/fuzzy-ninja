@@ -2,9 +2,26 @@ An iOS Remote app for Yahoo! Web player.
 ===========
 by __fuzzy-ninja__
 
-##2013雅虎北研黑客日 第13组fuzzy-ninja
+#使用方式
+###安装chrome插件:
 
-###获得本次最佳人气奖
+在chrome选择设置－工具－扩展程序
+
+开发模式－载入正在开发的插件
+
+选择chrome-addin文件夹
+
+后续可能进行打包
+
+###安装ios插件:
+
+开发者打开xcode工程，使用iphone进行调试
+
+非开发者可以使用模拟器，后续可能提供ipa
+
+###运行服务器
+
+参见node.js以及faye的相关文档
 
 #设计思路：
 
