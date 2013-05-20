@@ -19,9 +19,13 @@
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 
-@interface ControlViewController ()<SRWebSocketDelegate>
+@interface ControlViewController ()<SRWebSocketDelegate> {
+    int current_index;
+    float current_time;
+}
 
 @property (strong, nonatomic) SRWebSocket *ws;
+@property (strong, nonatomic) NSArray *list;
 
 @end
 
@@ -34,6 +38,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"noise"]];
+    
+    current_index = 0;
+    current_time = 0;
+    
+    self.list = [NSArray arrayWithObjects:@"Now Playing: Tron Legacy Trailer", @"Now Playing: MIKE RELM vs ZOETROPE", @"Now Playing: Yodel Song", nil];
 
     
     UIButton *button =  [UIButton buttonWithType:UIButtonTypeCustom];
@@ -42,10 +51,7 @@
     [button setFrame:CGRectMake(10, 0, 32, 32)];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     
-    NSLog(@"%@", mediaInfo);
-    [mediaInfo setValue:@"Now Playing: MIKE RELM vs ZOETROPE" forKey:@"name"];
-    
-    [self.MediaLabel setText:[mediaInfo valueForKey:@"name"]];
+    [self.MediaLabel setText:[self.list objectAtIndex:current_index]];
     
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     
@@ -56,7 +62,14 @@
     [self.mySlider setMinimumTrackTintColor:UIColorFromRGB(0x85250D)];
     [self.mySlider setMaximumTrackTintColor:UIColorFromRGB(0x85250D)];
     
+
+    
     NSLog(@"OK");
+}
+
+- (void)updateSlider {
+    [self.mySlider setValue:current_time animated:YES];
+    current_time += 0.1;
 }
 
 - (void)didReceiveMemoryWarning
@@ -68,11 +81,21 @@
 - (IBAction)doNext:(id)sender {
     NSUserDefaults *db = [NSUserDefaults standardUserDefaults];
     
+    if (current_index < 2)
+        current_index++;
+        
+    self.MediaLabel.text = [self.list objectAtIndex:current_index];
+    
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:@"matching", @"cmdType", @"mobile", @"sourceType", [db valueForKey:@"controller_id"], @"mobileID", [db valueForKey:@"player_id"], @"codeID", @"next", @"cmd", nil];
     [self.ws send:[params JSONString]];
 }
 
 - (IBAction)doPrevious:(id)sender {
+    if (current_index > 0)
+        current_index--;
+    
+    self.MediaLabel.text = [self.list objectAtIndex:current_index];
+
     NSUserDefaults *db = [NSUserDefaults standardUserDefaults];
     
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:@"matching", @"cmdType", @"mobile", @"sourceType", [db valueForKey:@"controller_id"], @"mobileID", [db valueForKey:@"player_id"], @"codeID", @"prev", @"cmd", nil];
@@ -80,6 +103,7 @@
 }
 
 - (IBAction)togglePlayPause:(id)sender {
+    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateSlider) userInfo:nil repeats:NO];
 
     NSUserDefaults *db = [NSUserDefaults standardUserDefaults];
 
