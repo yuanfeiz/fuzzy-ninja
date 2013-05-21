@@ -39,11 +39,31 @@ chrome插件，自动在当前网页中嵌入与sever通讯的相关基于jquery
 
 iOS应用，设计参考了ipod的转轮设计，使用时先扫瞄chrome插件中的二维码并进行连接。连接之后可以对网页中的播放器进行操作。
 
+##运行截图
+![screenshot](https://raw.github.com/stranbird/fuzzy-ninja/master/report/IMG_7300.PNG "screenshot") 
+
+![screenshot](https://raw.github.com/stranbird/fuzzy-ninja/master/report/IMG_7304.PNG "screenshot")
+
+![screenshot](https://raw.github.com/stranbird/fuzzy-ninja/master/report/IMG_7305.PNG "screenshot")
+
+![screenshot](https://raw.github.com/stranbird/fuzzy-ninja/master/report/IMG_7306.PNG "screenshot")
+
+![screenshot](https://raw.github.com/stranbird/fuzzy-ninja/master/report/IMG_7307.PNG "screenshot")
+
+![screenshot](https://raw.github.com/stranbird/fuzzy-ninja/master/report/IMG_7308.PNG "screenshot")
+
+![screenshot](https://raw.github.com/stranbird/fuzzy-ninja/master/report/IMG_7309.PNG "screenshot")
+
+![screenshot](https://raw.github.com/stranbird/fuzzy-ninja/master/report/IMG_7310.PNG "screenshot")
 ##关于
 
 2013雅虎北研黑客日 第13组fuzzy-ninja
 
 获得本次最佳人气奖
+
+![award](https://raw.github.com/stranbird/fuzzy-ninja/master/report/IMG_7289.JPG "award")
+
+![award](https://raw.github.com/stranbird/fuzzy-ninja/master/report/IMG_0002.JPG "award")
 
 开源并免费使用，欢迎二次开发，但希望引用时予以说明
 
